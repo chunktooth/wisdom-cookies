@@ -15,7 +15,7 @@ export const getQuotes = async () => {
 
 export const cleanQuotes = (quotes) => {
   return quotes.map(quote => ({
-    quote: quote.message,
+    message: quote.message,
     quote_id: quote.id
  }));
 }

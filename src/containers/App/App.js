@@ -3,6 +3,7 @@ import { Route, NavLink, withRouter } from 'react-router-dom';
 import { getQuotes } from '../../cleaners/getQuotes';
 import { loadQuotes } from '../../actions';
 import { connect } from 'react-redux';
+import { Cookie } from '../Cookie/Cookie';
 import { Jar } from '../Jar/Jar';
 import './App.css';
 
@@ -25,7 +26,10 @@ export class App extends Component {
           View Jar
         </NavLink>
         <Route exact path='/'
-          component={App} />
+          render={() => 
+            <Cookie quotes={this.props.quotes} /> 
+          }
+        />
         <Route exact path='/jar'
           component={Jar} />
       </div>
