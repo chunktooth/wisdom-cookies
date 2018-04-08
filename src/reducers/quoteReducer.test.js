@@ -1,4 +1,4 @@
-import { quoteReducer } from './quoteReducer';
+import quoteReducer from './quoteReducer';
 import * as action from '../actions';
 
 describe('quoteReducer', () => {

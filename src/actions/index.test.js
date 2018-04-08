@@ -1,4 +1,5 @@
 import * as actions from './index';
+import { mockQuotes } from '../cleaners/mockData';
 
 describe('load quotes', () => {
 
