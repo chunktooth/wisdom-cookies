@@ -1,25 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export const Cookie = ({quotes}) => {
-  console.log(quotes);
+export class Cookie extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      revealed: false
+    }
+  }
 
-  const openCookie = () => {
-    const randomKey = Math.floor(Math.random() * quotes.length);
-    let wisdom = quotes[randomKey].message;
-    console.log(wisdom);
+  eatCookie = () => {
+    const randomKey = Math.floor(Math.random() * this.props.quotes.length);
+    let wisdom = this.props.quotes[randomKey].message;
+
+    this.setState({ revealed: !this.state.revealed })
+    this.state.revealed === true ? this.hideWisdom() : this.showWisdom(wisdom);
   }; 
 
-  return (
-    <div>
-      <p></p>
-      <button 
-        onClick={() => openCookie()}>
-        Eat another cookie 
-      </button>
-    </div>
-  );
-};
+  showWisdom = (wisdom) => {
+    console.log(wisdom)
+  };
+
+  hideWisdom = () => {
+    console.log('hide');
+  };
+
+
+  render() {
+    return (
+      <div>
+        <button 
+          onClick={this.eatCookie}>
+          Eat another cookie 
+        </button>
+      </div>
+    );
+  }
+}
+ 
 
 Cookie.propTypes = {
   quotes: PropTypes.array

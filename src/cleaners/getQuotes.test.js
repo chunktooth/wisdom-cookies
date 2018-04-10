@@ -9,9 +9,7 @@ describe('getQuotes', () => {
       json: () => Promise.resolve(mockQuotes)
     }));
 
-    const retrieved = await getQuotes();
-    const expected = await cleanQuotes(mockQuotes);
-    expect(retrieved).toEqual(expected);
+    expect(getQuotes()).toEqual(getQuotes(mockQuotes));
   });
 
   it('should throw an error in case of bad response', () => {

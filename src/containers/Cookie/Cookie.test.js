@@ -14,11 +14,18 @@ describe('Cookie', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should return quote that matches the randomized key', () => {
+  it('should return a message that matches the randomized key', () => {
     const mockWisdom = mockQuotes[1].message;
-    const expected = 'Godluck and Goodspeed';
+    const expected = 'Godluck and Goodspeed!';
 
     expect(mockWisdom).toEqual(expected);
+  });
+
+  it('should toggle Cookie revealed state when invoking eatCookie', () => {
+    wrapper.instance().eatCookie();
+    expect(wrapper.state('revealed')).toEqual(true);
+    wrapper.instance().eatCookie();
+    expect(wrapper.state('revealed')).toEqual(false);
   });
 
 });
