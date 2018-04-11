@@ -1,10 +1,10 @@
-const quoteReducer = (state = {}, action) => {
+const cookieReducer = (state = {}, action) => {
   switch (action.type) {
-  case 'SAVE_WISDOM':
+  case 'KEEP_WISDOM':
     return { message: action.message, id: action.id };
   default:
     return state;
   }
 };
 
-export default quoteReducer;
+export default cookieReducer;

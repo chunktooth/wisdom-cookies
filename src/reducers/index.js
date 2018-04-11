@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import quoteReducer from './quoteReducer';
+import cookieReducer from './cookieReducer';
 
 const rootReducer = combineReducers({
-  quotes: quoteReducer
+  message: cookieReducer
 });
 
 export default rootReducer;

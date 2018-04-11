@@ -1,18 +1,80 @@
 .App {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   text-align: center;
+  background-image: url('../../images/red-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
   padding: 20px;
-  color: white;
 }
 
-.App-title {
-  font-size: 1.5em;
+.left-column {
+  width: 20%;
+  background-image: url('../../images/dragon.png');
 }
 
-.App-intro {
-  font-size: large;
+.dragon {
+  width: 340px;
+  height: 100vh;
+}
+
+.main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.title,
+.under-title,
+.under-button {
+  color: #FFFFFF;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.3em;
+}
+
+.sub-title {
+  font-size: 1.3em;
+}
+
+.clickable {
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  width: 10%;
+}
+
+.wisdom-jar {
+  width: 100px;
+}
+
+.under-button {
+  margin: 0;
+  font-size: .8em;
+}
+
+.pop-up {
+  visibility: hidden;
+}
+
+.clickable:hover .pop-up {
+  visibility: visible;
+  position: relative;
+  top: 0px;
+  background-color: #FFFFFF;
+  color: #A93E3C;
+  font-weight: bold;
+  font-size: .8em;
+  padding: 3px;
+}
+
+.nav {
+  text-decoration: none;
 }

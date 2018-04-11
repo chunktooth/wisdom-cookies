@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import { getQuotes } from '../../cleaners/getQuotes';
-import { keepWisdom } from '../../actions';
-import { connect } from 'react-redux';
+// import { keepWisdom } from '../../actions';
+// import { withRouter } from 'react-router-dom';
+// import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 export class Cookie extends Component {
@@ -28,8 +28,8 @@ export class Cookie extends Component {
     this.setState({ message: '' });
   };
 
-  putWisdomInJar = (wisdom) => {
-    this.props.keepWisdom(wisdom);
+  putWisdomInJar = () => {
+    // this.props.keepWisdom(this.state.message);
   }
 
   render() {
@@ -49,22 +49,22 @@ export class Cookie extends Component {
   }
 }
  
-export const mapStateToProps = (state) => {
-  return {
-    message: state.message,
-    id: state.id
-  };
-};
+// export const mapStateToProps = (state) => {
+//   return {
+//     message: state.message,
+//     id: state.id
+//   };
+// };
 
-export const mapDispatchToProps = (dispatch) => {
-  return {
-    keepWisdom: (wisdom) => (dispatch(keepWisdom(wisdom)))
-  };
-};
+// export const mapDispatchToProps = (dispatch) => {
+//   return {
+//     keepWisdom: (wisdom) => (dispatch(keepWisdom(wisdom)))
+//   };
+// };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cookie));
+// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cookie));
 
-Cookie.propTypes = {
-  keepWisdom: PropTypes.func,
-  wisdom: PropTypes.array
-};
+// Cookie.propTypes = {
+//   keepWisdom: PropTypes.func,
+//   wisdom: PropTypes.array
+// };

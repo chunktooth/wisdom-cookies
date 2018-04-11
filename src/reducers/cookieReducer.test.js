@@ -1,10 +1,10 @@
-import quoteReducer from './quoteReducer';
+import cookieReducer from './cookieReducer';
 import * as action from '../actions';
 
-describe('quoteReducer', () => {
+describe('cookieReducer', () => {
 
   it('should return default state', () => {
-    expect(quoteReducer(undefined, {})).toEqual([]);
+    expect(cookieReducer(undefined, {})).toEqual([]);
   });
 
   it('should be able to keep wisdom', () => {
@@ -14,7 +14,7 @@ describe('quoteReducer', () => {
         'id': '1234'
       }
 
-    expect(quoteReducer(undefined, action.keepWisdom(message, id))).toEqual(wisdom);
+    expect(cookieReducer(undefined, action.keepWisdom(message, id))).toEqual(wisdom);
   });
 
 });

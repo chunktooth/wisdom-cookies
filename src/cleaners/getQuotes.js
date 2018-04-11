@@ -1,10 +1,9 @@
 /*eslint max-len: ["error", { "ignoreUrls": true }]*/
 export const getQuotes = async () => {
   try {
-    const response = await fetch('http://fortunecookieapi.herokuapp.com/v1/fortunes?limit=10&skip=&page=');
+    const response = await fetch('http://fortunecookieapi.herokuapp.com/v1/fortunes?limit=1000&skip=&page=');
     const quotes = await response.json();
     const wisdom = await getWisdom(quotes);
-    console.log(wisdom);
    
     return wisdom;
   } catch (error) {
