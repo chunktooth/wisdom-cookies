@@ -1,5 +1,5 @@
 import React from 'react';
-import Cookie from './Cookie';
+import { Cookie } from './Cookie';
 import { shallow } from 'enzyme';
 import { mockQuotes } from '../../cleaners/mockData';
 

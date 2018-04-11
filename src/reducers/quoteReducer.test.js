@@ -7,19 +7,14 @@ describe('quoteReducer', () => {
     expect(quoteReducer(undefined, {})).toEqual([]);
   });
 
-  it('should loadQuotes', () => {
-    const quotes = [
+  it('should be able to keep wisdom', () => {
+    const wisdom =
       {
-        'message': 'Porque no?',
-        'id': '5280'
-      },
-      {
-        'message': 'Que sera, sera',
+        'message': 'Today is a gift, that\'s why it\'s called the present',
         'id': '1234'
       }
-    ];
 
-    expect(quoteReducer(undefined, action.loadQuotes(quotes))).toEqual(quotes);
+    expect(quoteReducer(undefined, action.keepWisdom(message, id))).toEqual(wisdom);
   });
 
 });

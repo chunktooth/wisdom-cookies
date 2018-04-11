@@ -1,10 +1,11 @@
+/* exported variableName */
 export const mockQuotes = [
   {
-    'message': 'Porque no?',
+    'message': 'Mankind is unkind, man',
     'id': '5280'
   },
   {
-    'message': 'Que sera, sera',
+    'message': 'Godluck and Goodspeed!',
     'id': '1234'
   }
 ];

@@ -1,26 +1,15 @@
 import * as actions from './index';
-import { mockQuotes } from '../cleaners/mockData';
 
-describe('load quotes', () => {
+describe('keep wisdom', () => {
 
-  it('should return a type of LOAD_QUOTES with payload', () => {
-    const quotes = [
-      {
-        'message': 'Porque no?',
-        'id': '5280'
-      },
-      {
-        'message': 'Que sera, sera',
-        'id': '1234'
-      }
-    ];
-
+  it('should return a type of KEEP_WISDOM with payload of message', () => {
+    const wisdom = { 'message': 'You shall not pass!' };
     const expected = {
-      type: 'LOAD_QUOTES',
-      quotes
+      type: 'KEEP_WISDOM',
+      wisdom
     };
 
-    expect(actions.loadQuotes(quotes)).toEqual(expected);
+    expect(actions.keepWisdom(wisdom)).toEqual(expected);
   });
 
 });

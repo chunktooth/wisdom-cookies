@@ -1,4 +1,4 @@
-export const loadQuotes = (quotes) => ({
-  type: 'LOAD_QUOTES',
-  quotes
+export const keepWisdom = (wisdom) => ({
+  type: 'KEEP_WISDOM',
+  wisdom
 });

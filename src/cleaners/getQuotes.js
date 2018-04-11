@@ -1,21 +1,20 @@
+/*eslint max-len: ["error", { "ignoreUrls": true }]*/
 export const getQuotes = async () => {
-
   try {
     const response = await fetch('http://fortunecookieapi.herokuapp.com/v1/fortunes?limit=10&skip=&page=');
     const quotes = await response.json();
-    const cleanedQuotes = await cleanQuotes(quotes);
-
-    console.log(cleanedQuotes);
-    return cleanedQuotes;
+    const wisdom = await getWisdom(quotes);
+    console.log(wisdom);
+   
+    return wisdom;
   } catch (error) {
     throw error;
   }
-
 };
 
-export const cleanQuotes = (quotes) => {
-  return quotes.map(quote => ({
-    message: quote.message,
-    quote_id: quote.id
- }));
+const getWisdom = async (quotes) => {
+  const randomKey = Math.floor(Math.random() * quotes.length);
+  const wisdom = quotes[randomKey];
+
+  return wisdom;
 }

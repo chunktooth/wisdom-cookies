@@ -1,7 +1,7 @@
-const quoteReducer = (state = [], action) => {
+const quoteReducer = (state = {}, action) => {
   switch (action.type) {
-  case 'LOAD_QUOTES':
-    return [...action.quotes];
+  case 'SAVE_WISDOM':
+    return { message: action.message, id: action.id };
   default:
     return state;
   }
