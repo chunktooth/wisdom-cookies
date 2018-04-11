@@ -6,8 +6,7 @@
   background-image: url('../../images/red-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-
+  height: 100%;
 }
 
 .App-header {
@@ -20,7 +19,7 @@
 }
 
 .dragon {
-  width: 340px;
+  width: 370px;
   height: 100vh;
 }
 
@@ -31,8 +30,14 @@
 
 .title,
 .under-title,
-.under-button {
+.under-button,
+.btn-txt {
   color: #FFFFFF;
+}
+
+.pop-up,
+.btn-txt {
+  font-size: .8em;
 }
 
 .title {
@@ -40,15 +45,19 @@
   font-size: 2.3em;
 }
 
-.sub-title {
-  font-size: 1.3em;
+.under-title {
+  font-size: 1em;
+  font-weight: lighter;
 }
 
-.clickable {
+.right-column {
+  width: 20%;
+}
+
+.keepjar-btn {
   position: absolute;
   top: 120px;
   right: 30px;
-  width: 10%;
 }
 
 .wisdom-jar {
@@ -64,17 +73,56 @@
   visibility: hidden;
 }
 
-.clickable:hover .pop-up {
-  visibility: visible;
-  position: relative;
-  top: 0px;
-  background-color: #FFFFFF;
-  color: #A93E3C;
-  font-weight: bold;
-  font-size: .8em;
-  padding: 3px;
-}
-
 .nav {
   text-decoration: none;
+}
+
+.wisdom-wrapper {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.cookie {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.message-wrapper  {
+  position: absolute;
+  top: 26px;
+  left: 265px;
+  text-align: center;
+  z-index: 0;
+}
+
+.message {
+  width: 330px;
+  color: #3A4B77;
+  font-size: .8em;
+  font-weight: bold;
+}
+
+.cookie-btn {
+  position: absolute;
+  top: 285px;
+  right: 30px;
+}
+
+.eat-cookie {
+  width: 80px;
+  cursor: pointer;
+}
+
+.putjar-btn {
+  position: absolute;
+  top: 420px;
+  right: 30px;
+}
+
+.to-jar {
+  width: 100px;
+  cursor: pointer;
 }

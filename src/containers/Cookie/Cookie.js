@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { getQuotes } from '../../cleaners/getQuotes';
+import wisdom from '../../images/wisdom-paper.jpg';
 // import { keepWisdom } from '../../actions';
 // import { withRouter } from 'react-router-dom';
 // import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export class Cookie extends Component {
   constructor(props) {
@@ -21,11 +22,11 @@ export class Cookie extends Component {
 
   showWisdom = async () => {
     const wisdom = await getQuotes();
-    this.setState({ message: wisdom.message })
+    this.setState({ message: wisdom.message });
   };
 
   hideWisdom = () => {
-    this.setState({ message: '' });
+    this.setState({ message: ''});
   };
 
   putWisdomInJar = () => {
@@ -34,16 +35,20 @@ export class Cookie extends Component {
 
   render() {
     return (
-      <div>
-        <div>{this.state.message}</div>
-        <button 
-          onClick={this.eatCookie}>
-          Eat another cookie 
-        </button>
-        <button
-          onClick={this.putWisdomInJar}>
-          Put wisdom in a jar
-        </button>
+      <div className='cookie'>      
+        {
+          this.state.revealed &&
+          <div className='wisdom-wrapper'>
+            <div className='message-wrapper'>
+              <p className='message'>
+                {this.state.message}
+              </p>
+            </div>
+            <img src={wisdom}
+              className='wisdom-paper'
+              alt="Wisdom on a paper" />
+          </div>   
+        }
       </div>
     );
   }

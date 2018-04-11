@@ -3,6 +3,8 @@ export const getQuotes = async () => {
   try {
     const response = await fetch('http://fortunecookieapi.herokuapp.com/v1/fortunes?limit=1000&skip=&page=');
     const quotes = await response.json();
+    console.log(quotes)
+    
     const wisdom = await getWisdom(quotes);
    
     return wisdom;
