@@ -54,8 +54,8 @@ export class App extends Component {
               src={toJar}
               className='to-jar'
               alt="A jar for many wisdoms"
-              onClick={() => this.refs.child.putWisdomInJar()} />
-            <p className='btn-txt'>Put wisdom in a jar</p>
+              onClick={this.props.keepInJar} />
+            <p className='btn-txt'>Keep wisdom in a jar</p>
           </div>
 
         </div>

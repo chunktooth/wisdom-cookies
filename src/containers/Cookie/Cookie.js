@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { getQuotes } from '../../cleaners/getQuotes';
 import wisdom from '../../images/wisdom-paper.jpg';
-// import { keepWisdom } from '../../actions';
-// import { withRouter } from 'react-router-dom';
-// import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
+import leftCookie from '../../images/left-cookie.png';
+import rightCookie from '../../images/right-cookie.png';
+import { keepInJar } from '../../actions';
+import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export class Cookie extends Component {
   constructor(props) {
@@ -30,12 +32,15 @@ export class Cookie extends Component {
   };
 
   putWisdomInJar = () => {
-    // this.props.keepWisdom(this.state.message);
+    this.props.keepInJar(this.state.message);
   }
 
   render() {
     return (
-      <div className='cookie'>      
+      <div className='cookie'>
+
+      
+
         {
           this.state.revealed &&
           <div className='wisdom-wrapper'>
@@ -47,29 +52,29 @@ export class Cookie extends Component {
             <img src={wisdom}
               className='wisdom-paper'
               alt="Wisdom on a paper" />
-          </div>   
-        }
+          </div>  
+        }      
+
       </div>
     );
   }
 }
  
-// export const mapStateToProps = (state) => {
-//   return {
-//     message: state.message,
-//     id: state.id
-//   };
-// };
+export const mapStateToProps = (state) => {
+  return {
+    jar: state.wisdom
+  };
+};
 
-// export const mapDispatchToProps = (dispatch) => {
-//   return {
-//     keepWisdom: (wisdom) => (dispatch(keepWisdom(wisdom)))
-//   };
-// };
+export const mapDispatchToProps = (dispatch) => {
+  return {
+    keepInJar: (wisdom) => (dispatch(keepInJar(wisdom)))
+  };
+};
 
-// export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cookie));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Cookie));
 
-// Cookie.propTypes = {
-//   keepWisdom: PropTypes.func,
-//   wisdom: PropTypes.array
-// };
+Cookie.propTypes = {
+  keepInJar: PropTypes.func,
+  wisdom: PropTypes.array
+};

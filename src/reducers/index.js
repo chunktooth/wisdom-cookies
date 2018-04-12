@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import cookieReducer from './cookieReducer';
+import jarReducer from './jarReducer';
 
 const rootReducer = combineReducers({
-  message: cookieReducer
+  jar: jarReducer
 });
 
 export default rootReducer;

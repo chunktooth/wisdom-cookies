@@ -85,10 +85,18 @@
   text-align: center;
 }
 
-.cookie {
+.cookie-wrapper {
   width: 100%;
-  margin: 0 auto;
 }
+
+/*.left-cookie, .right-cookie {
+  position: absolute;
+  z-index: 2;
+}
+
+.left-cookie {
+
+}*/
 
 .message-wrapper  {
   position: absolute;
