@@ -7,11 +7,11 @@ describe('keep wisdom', () => {
       'message': 'Time is a flat circle.' 
     };
     const expected = {
-      type: 'KEEP_IN_JAR',
+      type: 'KEEP_WISDOM',
       wisdom
     };
 
-    expect(actions.keepInJar(wisdom)).toEqual(expected);
+    expect(actions.keepWisdom(wisdom)).toEqual(expected);
   });
 
 });

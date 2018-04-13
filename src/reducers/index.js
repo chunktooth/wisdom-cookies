@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import jarReducer from './jarReducer';
+import wisdomPaperReducer from './wisdomPaperReducer';
 
 const rootReducer = combineReducers({
-  jar: jarReducer
+  wisdoms: wisdomPaperReducer
 });
 
 export default rootReducer;

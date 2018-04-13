@@ -1,21 +1,21 @@
-import jarReducer from './jarReducer';
+import wisdomPaperReducer from './wisdomPaperReducer';
 import * as action from '../actions';
 
-describe('jarReducer', () => {
+describe('wisdomPaperReducer', () => {
 
   it('should return default state', () => {
-    expect(jarReducer(undefined, {})).toEqual([]);
+    expect(wisdomPaperReducer(undefined, {})).toEqual([]);
   });
 
-  it('should keep wisdom in jar', () => {
+  it('can keep wisdom in jar', () => {
     const wisdom = { 
       message: 'Whiskey is mighty risky.',
       id: '888'
     }
-    expect(jarReducer(undefined, action.keepInJar(wisdom))).toEqual([wisdom]);
+    expect(wisdomPaperReducer(undefined, action.keepWisdom(wisdom))).toEqual([wisdom]);
   });
 
-  it('should take wisdom off jar', () => {
+  it('can trash wisdom from jar', () => {
     const wisdoms = [{ 
       message: 'Whiskey is mighty risky.',
       id: '888' 
@@ -30,7 +30,7 @@ describe('jarReducer', () => {
       id: '999' 
     }];
 
-    expect(jarReducer(wisdoms, action.takeOffJar(id))).toEqual(expected);
+    expect(wisdomPaperReducer(wisdoms, action.trashWisdom(id))).toEqual(expected);
   });
 
 })

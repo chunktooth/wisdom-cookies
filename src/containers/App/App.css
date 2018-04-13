@@ -79,24 +79,11 @@
 
 .wisdom-wrapper {
   position: relative;
-  top: 100px;
+  top: 75px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 }
-
-.cookie-wrapper {
-  width: 100%;
-}
-
-/*.left-cookie, .right-cookie {
-  position: absolute;
-  z-index: 2;
-}
-
-.left-cookie {
-
-}*/
 
 .message-wrapper  {
   position: absolute;
@@ -107,7 +94,7 @@
 }
 
 .message {
-  width: 330px;
+  position: absolute;
   color: #3A4B77;
   font-size: .8em;
   font-weight: bold;

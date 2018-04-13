@@ -1,9 +1,14 @@
-export const keepInJar = (wisdom) => ({
-  type: 'KEEP_IN_JAR',
+export const loadWisdoms = (wisdoms) => ({
+  type: 'LOAD_WISDOMS',
+  wisdoms
+});
+
+export const keepWisdom = (wisdom) => ({
+  type: 'KEEP_WISDOM',
   wisdom
 });
 
-export const takeOffJar = (id) => ({
-  type: 'TAKE_OFF_JAR',
+export const trashWisdom = (id) => ({
+  type: 'TRASH_WISDOM',
   id
 });
