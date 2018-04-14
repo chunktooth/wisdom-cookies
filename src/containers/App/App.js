@@ -41,7 +41,6 @@ export class App extends Component {
   }; 
 
   showWisdom = async (wisdoms) => {
-    // would it use better store usage, to put randomize wisdom in compodidmount instead? swapi-box bug?
     const randomKey = Math.floor(Math.random() * wisdoms.length);
     const wisdom = wisdoms[randomKey];
     this.setState({ wisdom });

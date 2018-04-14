@@ -90,7 +90,7 @@
 }
 
 .left-cookie {
-  top: 200px;
+  top: 160px;
   left: 469px;
   width: 320px;
   z-index: 2;
@@ -98,7 +98,7 @@
 }
 
 .right-cookie {
-  top: 200px;
+  top: 150px;
   right: 500px;
   width: 274px;
   z-index: 1;
@@ -108,11 +108,12 @@
 }
 
 .left-cookie-broken {
-  left: 38px;
+  left: 280px;
+  transform: rotate(0deg);
 }
 
 .right-cookie-broken {
-  right: 70px;
+  right: 320px;
 }
 
 .wisdom-wrapper {
