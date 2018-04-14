@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Cookie } from '../Cookie/Cookie';
+// import { Cookie } from '../Cookie/Cookie';
 import { Jar } from '../Jar/Jar';
 import { getWisdoms } from '../../cleaners/getWisdoms';
 import { loadWisdoms, keepWisdom } from '../../actions';
@@ -10,6 +10,8 @@ import wisdom from '../../images/wisdom-paper.jpg';
 import wisdomJar from '../../images/wisdom-jar.png';
 import toJar from '../../images/put-inna-jar.png';
 import eatCookie from '../../images/eat-cookie.png';
+import leftCookie from '../../images/left-cookie.png';
+import rightCookie from '../../images/right-cookie.png';
 import PropTypes from 'prop-types';
 import './App.css';
 
@@ -17,68 +19,100 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      revealed: false,
-      message: ''
+      revealWisdom: false,
+      brokenCookie: false, 
+      wisdom: {},
+      jar: []
     }
   }
 
   async componentDidMount() {
     const wisdoms = await getWisdoms();
-    console.log(wisdoms);
     this.props.loadWisdoms(wisdoms)
   }
 
   eatCookie = () => {
     const { wisdoms } = this.props;
-    this.setState({ revealed: !this.state.revealed })
-    this.state.revealed === true ? this.hideWisdom(wisdoms) : this.showWisdom(wisdoms);
+    this.setState({ 
+      revealWisdom: !this.state.revealWisdom,
+      brokenCookie: !this.state.brokenCookie
+     })
+    this.state.revealWisdom === true ? this.hideWisdom(wisdoms) : this.showWisdom(wisdoms);
   }; 
 
   showWisdom = async (wisdoms) => {
+    // would it use better store usage, to put randomize wisdom in compodidmount instead? swapi-box bug?
     const randomKey = Math.floor(Math.random() * wisdoms.length);
-    const wisdom = wisdoms[randomKey].message;
-    console.log(wisdom);
-    this.setState({ message: wisdom });
+    const wisdom = wisdoms[randomKey];
+    this.setState({ wisdom });
   };
 
   hideWisdom = () => {
-    // this.setState({ message: '' });
+    this.setState({ 
+      wisdom: {},
+      brokenCookie: false,
+      revealWisdom: false });
   };
 
   putWisdomInJar = () => {
-    // this.props.keepWisdom(this.props.wisdom);
+    let { jar } = this.props;
+    let { wisdom } = this.state;
+    
+    if (!jar.find(wisdomInJar => wisdomInJar.id === wisdom.id)) {
+      this.props.keepWisdom(wisdom);
+    }
+    this.setState({ 
+      revealWisdom: false,
+      brokenCookie: false 
+    });
   }
 
   render() {
+    let leftCookieState = this.state.brokenCookie === true ? 'left-cookie-broken' : '';
+    let rightCookieState = this.state.brokenCookie === true ? 'right-cookie-broken' : '';
+
     return (
       <div className='App'>
 
         <div className='left-column'>
           <img src={dragon}
             className='dragon'
-            alt='An sillhouete of Chinese dragon' />
+            alt='An silhouette of Chinese dragon' />
         </div>
 
         <div className='main'>
           <header className='App-header'>
             <h1 className="title">Wisdom Co0kies</h1>
             <h4 className="under-title">Choose wisdom to guide your fortune</h4>
-          </header>   
+          </header>  
 
-          <div className='cookie'>   
+          { !this.state.broken && 
+             <div className='cookie'>
+              <img src={leftCookie}
+              className={`left-cookie ${leftCookieState}`}
+              alt="left piece of cookie"
+              onClick={this.eatCookie} />  
+              <img src={rightCookie}
+              className={`right-cookie ${rightCookieState}`}
+              alt="right piece of cookie"
+               onClick={this.eatCookie} /> 
+            </div>
+          }
+
           {
-            this.state.revealed &&
+            this.state.revealWisdom &&
             <div className='wisdom-wrapper'>
               <p className='message'>
-                {this.state.message}
+                {this.state.wisdom.message}
               </p>
               <img src={wisdom}
                 className='wisdom-paper'
-                alt="Wisdom on a paper" />
-            </div>  
-          }      
-          </div>
-         </div>
+                alt="Wisdom on a paper"
+                onClick={this.eatCookie} />
+            </div>         
+          } 
+
+        </div>     
 
         <div className='right-column'>
           <div className='keepjar-btn'>
@@ -88,9 +122,9 @@ export class App extends Component {
               className='nav'>
               <img src={wisdomJar}
                 className='wisdom-jar' 
-                alt="Revisit a jar of wisdom" />
-              <p className='under-button'>0 Wisdom in Jar</p>
-            </NavLink>   
+                alt="Revisit a jar of wisdoms" />
+              <p className='under-button'>{`(${this.props.jar.length}) Wisdom in Jar`}</p>
+            </NavLink>  
           </div>
 
           <div className='cookie-btn'>
@@ -105,14 +139,11 @@ export class App extends Component {
             <img
               src={toJar}
               className='to-jar'
-              alt="A jar for many wisdoms"
+              alt="A jar to throw in wisdoms"
               onClick={this.putWisdomInJar} />
             <p className='btn-txt'>Keep wisdom in a jar</p>
           </div>
         </div>
-
-        <Route exact path='/jar'
-          component={Jar} />
       </div>
     );
   }
@@ -120,7 +151,8 @@ export class App extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    wisdoms: state.wisdoms
+    wisdoms: state.wisdoms,
+    jar: state.jar
   };
 };
 

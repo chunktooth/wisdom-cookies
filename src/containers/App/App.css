@@ -77,27 +77,58 @@
   text-decoration: none;
 }
 
+.left-cookie, .right-cookie {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.cookie {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left-cookie {
+  top: 244px;
+  left: 228px;
+  width: 227px;
+  z-index: 2;
+}
+
+.right-cookie {
+  top: 243px;
+  right: 224px;
+  width: 200px;
+  z-index: 1;
+}
+
+.left-cookie-broken {
+  left: 38px;
+}
+
+.right-cookie-broken {
+  right: 70px;
+}
+
 .wisdom-wrapper {
   position: relative;
   top: 75px;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.message-wrapper  {
-  position: absolute;
-  top: 26px;
-  left: 265px;
-  text-align: center;
+  width: 338px;
+  margin: auto;
   z-index: 0;
 }
 
 .message {
   position: absolute;
+  top: 34px;
+  text-align: center;
+  vertical-align: middle;
+  width: 338px;
   color: #3A4B77;
   font-size: .8em;
   font-weight: bold;
+  margin: 0;
 }
 
 .cookie-btn {
