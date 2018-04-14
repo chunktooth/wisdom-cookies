@@ -1,0 +1,72 @@
+.left-cookie, .right-cookie {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.cookie {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.left-cookie {
+  top: 160px;
+  left: 469px;
+  width: 320px;
+  z-index: 2;
+  transform: rotate(10deg);
+}
+
+.right-cookie {
+  top: 150px;
+  right: 500px;
+  width: 274px;
+  z-index: 1;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.left-cookie-broken {
+  left: 280px;
+  transform: rotate(0deg);
+}
+
+.right-cookie-broken {
+  right: 320px;
+}
+
+.wisdom-wrapper {
+  position: relative;
+  top: 75px;
+  width: 338px;
+  margin: auto;
+  z-index: 0;
+}
+
+.message {
+  position: absolute;
+  top: 34px;
+  text-align: center;
+  vertical-align: middle;
+  width: 338px;
+  color: #3A4B77;
+  font-size: .8em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.putjar-btn {
+  position: relative;
+  top: 90px;
+}
+
+.to-jar {
+  width: 100px;
+  cursor: pointer;
+}
+
+.btn-txt {
+  margin: 0;
+}
