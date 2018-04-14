@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
-import { Jar } from '../Jar/Jar';
+import Jar from '../Jar/Jar';
 import { getWisdoms } from '../../cleaners/getWisdoms';
 import { loadWisdoms } from '../../actions';
 import dragon from '../../images/dragon.png';
@@ -47,19 +47,11 @@ export class App extends Component {
                 className='wisdom-jar' 
                 alt="Revisit a jar of wisdoms" />
               <p className='under-button'>{`(${this.props.jar.length}) Wisdom in Jar`}</p>
+              <Route exact path='/jar'
+                component={ Jar } />
             </NavLink>  
           </div>
 
-          {
-            <div className='cookie-btn'>
-              <img src={eatCookie}
-                className='eat-cookie'
-                alt="More wisdom to be had"
-                onClick={this.eatCookie} />
-              <p className='btn-txt'>Eat another cookie</p>
-            </div>
-          }
-         
         </div>
       </div>
     );
