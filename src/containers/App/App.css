@@ -90,17 +90,21 @@
 }
 
 .left-cookie {
-  top: 244px;
-  left: 228px;
-  width: 227px;
+  top: 200px;
+  left: 469px;
+  width: 320px;
   z-index: 2;
+  transform: rotate(10deg);
 }
 
 .right-cookie {
-  top: 243px;
-  right: 224px;
-  width: 200px;
+  top: 200px;
+  right: 500px;
+  width: 274px;
   z-index: 1;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(-20deg);
 }
 
 .left-cookie-broken {
