@@ -1,0 +1,11 @@
+.wisdom-message, 
+.delete-btn {
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-weight: bold
+}

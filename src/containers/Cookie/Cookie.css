@@ -1,3 +1,12 @@
+.Cookie {
+  margin: auto;
+}
+
+.cookie-container {
+  width: 50%;
+  overflow: hidden;
+}
+
 .left-cookie, .right-cookie {
   position: absolute;
   display: inline-block;
@@ -5,22 +14,21 @@
   transition: all 1s;
 }
 
-.cookie {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .left-cookie {
-  top: 160px;
-  left: 469px;
+  /*top: 160px;
+  left: 469px;*/
+  top: 250px;
+  left: 100px;
   width: 320px;
   z-index: 2;
   transform: rotate(10deg);
 }
 
 .right-cookie {
-  top: 150px;
-  right: 500px;
+  /*top: 150px;
+  right: 500px;*/
+  top: 240px;
+  left: 320px;
   width: 274px;
   z-index: 1;
   -webkit-transform: rotate(-20deg);
@@ -29,17 +37,20 @@
 }
 
 .left-cookie-broken {
-  left: 280px;
+  /*left: 280px;*/
+  left: -190px;
   transform: rotate(0deg);
 }
 
 .right-cookie-broken {
-  right: 320px;
+  /*right: 320px;*/
+  left: 380px;
 }
 
 .wisdom-wrapper {
-  position: relative;
-  top: 75px;
+  position: absolute;
+  top: 320px;
+  left: 90px;
   width: 338px;
   margin: auto;
   z-index: 0;
@@ -58,8 +69,9 @@
 }
 
 .putjar-btn {
-  position: relative;
-  top: 120px;
+  position: absolute;
+  width: 50%;
+  top: 500px;
 }
 
 .to-jar {

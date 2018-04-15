@@ -3,12 +3,12 @@ export const loadWisdoms = (wisdoms) => ({
   wisdoms
 });
 
-export const keepWisdom = (wisdom) => ({
-  type: 'KEEP_WISDOM',
+export const keepInJar = (wisdom) => ({
+  type: 'KEEP_IN_JAR',
   wisdom
 });
 
-export const trashWisdom = (id) => ({
-  type: 'TRASH_WISDOM',
+export const trashFromJar = (id) => ({
+  type: 'TRASH_FROM_JAR',
   id
 });

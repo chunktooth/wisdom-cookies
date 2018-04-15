@@ -1,5 +1,5 @@
 /* exported variableName */
-export const mockQuotes = [
+export const mockWisdoms = [
   {
     'message': 'Mankind is unkind, man',
     'id': '5280'

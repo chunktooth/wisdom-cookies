@@ -6,21 +6,27 @@
   background-image: url('../../images/red-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
 }
 
 .App-header {
   padding: 20px;
 }
 
-.left-column {
-  width: 20%;
-  background-image: url('../../images/dragon.png');
+.left-column, 
+.right-column {
+  width: 50%;
+  overflow: hidden;
 }
 
 .dragon {
   width: 370px;
   height: 100vh;
+}
+
+.empty-jar {
+  position: absolute;
+  top: 30px;
+  margin-right: 50px;
 }
 
 .main {
@@ -48,10 +54,6 @@
 .under-title {
   font-size: 1em;
   font-weight: lighter;
-}
-
-.right-column {
-  width: 20%;
 }
 
 .keepjar-btn {

@@ -1,7 +1,7 @@
 const wisdomPaperReducer = (state = [], action) => {
   switch (action.type) {
   case 'LOAD_WISDOMS':
-    return [...action.wisdoms]
+    return [...action.wisdoms];
   default:
     return state;
   }

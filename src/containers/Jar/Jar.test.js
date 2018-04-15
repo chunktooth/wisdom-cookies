@@ -1,15 +1,16 @@
 import React from 'react';
 import { Jar } from './Jar';
 import { shallow } from 'enzyme';
+import { mockWisdoms } from '../../mockData';
 
 describe('Jar', () => {
-  let wrapper;
+  let wrapper
 
   beforeEach(() => {
-    wrapper = shallow(<Jar />);
+    wrapper = shallow(<Jar jar={mockWisdoms}/>);
   });
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
