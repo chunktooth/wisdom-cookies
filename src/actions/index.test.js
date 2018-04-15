@@ -1,26 +1,54 @@
 import * as actions from './index';
-import { mockQuotes } from '../cleaners/mockData';
 
-describe('load quotes', () => {
+describe('actions', () => {
 
-  it('should return a type of LOAD_QUOTES with payload', () => {
-    const quotes = [
+  describe('load wisdoms', () => {
+
+    it('should return a type of LOAD_WISDOMS with payload of wisdoms', () => {
+      const wisdoms = [{ 
+        'message': 'Time is a flat circle.'
+      }, 
       {
-        'message': 'Porque no?',
-        'id': '5280'
-      },
-      {
-        'message': 'Que sera, sera',
-        'id': '1234'
-      }
-    ];
+        'message': 'A wizard is never late'
+      }];
+      const expected = {
+        type: 'LOAD_WISDOMS',
+        wisdoms
+      };
 
-    const expected = {
-      type: 'LOAD_QUOTES',
-      quotes
-    };
+      expect(actions.loadWisdoms(wisdoms)).toEqual(expected);
+    });
 
-    expect(actions.loadQuotes(quotes)).toEqual(expected);
+  });
+
+  describe('keep in jar', () => {
+
+    it('should return a type of KEEP_IN_JAR with payload of wisdoms', () => {
+      const wisdom = { 
+        'message': 'Time is a flat circle.' 
+      };
+      const expected = {
+        type: 'KEEP_IN_JAR',
+        wisdom
+      };
+
+      expect(actions.keepInJar(wisdom)).toEqual(expected);
+    });
+
+  });
+
+  describe('trash from jar', () => {
+
+    it('should return a type of TRASH_FROM_JAR with payload of wisdoms', () => {
+      const id = '1984';
+      const expected = {
+        type: 'TRASH_FROM_JAR',
+        id
+      };
+
+      expect(actions.trashFromJar(id)).toEqual(expected);
+    });
+
   });
 
 });

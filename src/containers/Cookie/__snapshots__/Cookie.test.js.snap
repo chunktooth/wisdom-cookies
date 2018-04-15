@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cookie should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Cookie />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="cookie-container"
+>
+          <img
+                    alt="left piece of cookie"
+                    className="left-cookie "
+                    onClick={[Function]}
+                    src="left-cookie.png"
+          />
+          <img
+                    alt="right piece of cookie"
+                    className="right-cookie "
+                    onClick={[Function]}
+                    src="right-cookie.png"
+          />
+</div>,
+        false,
+      ],
+      "className": "Cookie",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="left piece of cookie"
+              className="left-cookie "
+              onClick={[Function]}
+              src="left-cookie.png"
+/>,
+            <img
+              alt="right piece of cookie"
+              className="right-cookie "
+              onClick={[Function]}
+              src="right-cookie.png"
+/>,
+          ],
+          "className": "cookie-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "left piece of cookie",
+              "className": "left-cookie ",
+              "onClick": [Function],
+              "src": "left-cookie.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "right piece of cookie",
+              "className": "right-cookie ",
+              "onClick": [Function],
+              "src": "right-cookie.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+        ],
+        "type": "div",
+      },
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="cookie-container"
+>
+            <img
+                        alt="left piece of cookie"
+                        className="left-cookie "
+                        onClick={[Function]}
+                        src="left-cookie.png"
+            />
+            <img
+                        alt="right piece of cookie"
+                        className="right-cookie "
+                        onClick={[Function]}
+                        src="right-cookie.png"
+            />
+</div>,
+          false,
+        ],
+        "className": "Cookie",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="left piece of cookie"
+                className="left-cookie "
+                onClick={[Function]}
+                src="left-cookie.png"
+/>,
+              <img
+                alt="right piece of cookie"
+                className="right-cookie "
+                onClick={[Function]}
+                src="right-cookie.png"
+/>,
+            ],
+            "className": "cookie-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "left piece of cookie",
+                "className": "left-cookie ",
+                "onClick": [Function],
+                "src": "left-cookie.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "right piece of cookie",
+                "className": "right-cookie ",
+                "onClick": [Function],
+                "src": "right-cookie.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+          ],
+          "type": "div",
+        },
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

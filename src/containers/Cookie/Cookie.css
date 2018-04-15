@@ -1,0 +1,116 @@
+.Cookie {
+  width: 100%;
+  margin: auto 0;
+}
+
+.cookie-container {
+  width: 100%;
+}
+
+.left-cookie, .right-cookie {
+  position: absolute;
+  /*display: inline-block;*/
+  cursor: pointer;
+  transition: all .6s;
+}
+
+.left-cookie {
+  top: 295px;
+  /*left: 469px;*/
+  /*top: 250px;*/
+  left: 100px;
+  width: 320px;
+  z-index: 2;
+  transform: rotate(-6deg);
+}
+
+.right-cookie {
+  top: 300px;
+  left: 270px;
+  width: 280px;
+  z-index: 1;
+  -webkit-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  transform: rotate(0deg);
+}
+
+.left-cookie-broken {
+  top: 320px;
+  left: -66px;
+  transform: rotate(-6deg);
+  z-index: 0;
+}
+
+.right-cookie-broken {
+  left: 468px;
+  transform: rotate(-16deg);
+  z-index: 0;
+}
+
+.Wisdom {
+  width: 50%;
+}
+
+
+.wisdom-wrapper {
+  position: absolute;
+  top: 380px;
+  width: 50%;
+  z-index: 0;
+  margin: auto 0;
+}
+
+.message {
+  position: absolute;
+  top: 40px;
+  left: 197px;
+  width: 320px;
+  color: #3A4B77;
+  font-size: .8em;
+  font-weight: bold;
+  margin: 0;
+  z-index: 7;
+}
+
+.pop-up-btns {
+  display: inline-block;
+  width: 100%;
+  top: 100px;
+}
+
+.put-in-jar,
+.eat-another {
+  display: inline-block;
+}
+
+.to-jar {
+  width: 80px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px #FFF;
+  padding-bottom: 4.5px;
+}
+
+.to-jar:hover,
+.eat-cookie:hover {
+  box-shadow: 0px 0px 20px 2px #FFF;
+}
+
+.eat-cookie {
+  box-shadow: 0px 0px 10px 2px #FFF;
+  padding: 10px 0;
+}
+
+.btn-txt {
+  margin: 0;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.left-column,
+.right-column {
+  width: 50%;
+}

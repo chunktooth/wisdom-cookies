@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Jar should match the snapshot 1`] = `
+exports[`WisdomInJar should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -31,42 +31,43 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Component)
-          id="5280"
-          message="Mankind is unkind, man"
+        <p
+          className="wisdom-message"
 />,
-        <Connect(Component)
-          id="1234"
-          message="Godluck and Goodspeed!"
-/>,
+        <button
+          className="delete-btn"
+          onClick={[Function]}
+>
+          X
+</button>,
       ],
-      "className": "wisdom-collection",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
-        "key": "5280",
-        "nodeType": "class",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "id": "5280",
-          "message": "Mankind is unkind, man",
+          "children": undefined,
+          "className": "wisdom-message",
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": "p",
       },
       Object {
         "instance": null,
-        "key": "1234",
-        "nodeType": "class",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "id": "1234",
-          "message": "Godluck and Goodspeed!",
+          "children": "X",
+          "className": "delete-btn",
+          "onClick": [Function],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": "X",
+        "type": "button",
       },
     ],
     "type": "div",
@@ -78,42 +79,43 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Component)
-            id="5280"
-            message="Mankind is unkind, man"
+          <p
+            className="wisdom-message"
 />,
-          <Connect(Component)
-            id="1234"
-            message="Godluck and Goodspeed!"
-/>,
+          <button
+            className="delete-btn"
+            onClick={[Function]}
+>
+            X
+</button>,
         ],
-        "className": "wisdom-collection",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
-          "key": "5280",
-          "nodeType": "class",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "id": "5280",
-            "message": "Mankind is unkind, man",
+            "children": undefined,
+            "className": "wisdom-message",
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": "p",
         },
         Object {
           "instance": null,
-          "key": "1234",
-          "nodeType": "class",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "id": "1234",
-            "message": "Godluck and Goodspeed!",
+            "children": "X",
+            "className": "delete-btn",
+            "onClick": [Function],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": "X",
+          "type": "button",
         },
       ],
       "type": "div",

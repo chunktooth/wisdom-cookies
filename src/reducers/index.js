@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import quoteReducer from './quoteReducer';
+import wisdomPaperReducer from './wisdomPaperReducer';
+import jarReducer from './jarReducer';
 
 const rootReducer = combineReducers({
-  quotes: quoteReducer
+  wisdoms: wisdomPaperReducer,
+  jar: jarReducer
 });
 
 export default rootReducer;
