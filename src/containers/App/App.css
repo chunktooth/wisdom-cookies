@@ -6,44 +6,28 @@
   background-image: url('../../images/red-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .App-header {
+  width: 100%;
   padding: 20px;
 }
 
 .left-column, 
 .right-column {
   width: 50%;
-  overflow: hidden;
-}
-
-.dragon {
-  width: 370px;
-  height: 100vh;
-}
-
-.empty-jar {
-  position: absolute;
-  top: 30px;
-  margin-right: 50px;
-}
-
-.main {
-  width: 60%;
-  margin: 0 auto;
 }
 
 .title,
 .under-title,
-.under-button,
 .btn-txt {
   color: #FFFFFF;
 }
 
-.pop-up,
 .btn-txt {
   font-size: .8em;
+  margin: 5px;
 }
 
 .title {
@@ -53,30 +37,27 @@
 
 .under-title {
   font-size: 1em;
-  font-weight: lighter;
 }
 
-.keepjar-btn {
+.nav-bar {
   position: absolute;
-  top: 120px;
-  right: 30px;
-}
-
-.wisdom-jar {
-  width: 100px;
-}
-
-.under-button {
-  margin: 0;
-  font-size: .8em;
-}
-
-.pop-up {
-  visibility: hidden;
+  width: 100%;
+  top: 173px;
+  text-align: center;
 }
 
 .nav {
   text-decoration: none;
+}
+
+.wisdom-jar {
+  width: 70px;
+  padding: 7px;
+  box-shadow: 0px 0px 10px 2px #FFF;
+}
+
+.wisdom-jar:hover {
+  box-shadow: 0px 0px 20px 2px #FFF;
 }
 
 .cookie-btn {

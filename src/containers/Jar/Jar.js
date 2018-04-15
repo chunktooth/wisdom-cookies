@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import WisdomInJar from '../WisdomInJar/WisdomInJar';
 import PropTypes from 'prop-types';
+import { emptyJar } from '../../images/empty-jar.png';
 import './Jar.css';
 
 export const Jar = ({ jar }) => {
@@ -14,6 +15,9 @@ export const Jar = ({ jar }) => {
 
   return (
     <div className='wisdom-collection'>
+      <img src={emptyJar}
+        className='empty-jar' 
+        alt="A jar of wisdom collection" />
       {wisdomCollection}
     </div>
   );  

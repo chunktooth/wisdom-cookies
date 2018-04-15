@@ -47,7 +47,7 @@ export class Cookie extends Component {
   putWisdomInJar = () => {
     let { jar } = this.props;
     let { wisdom } = this.state;
-    
+
     if (!jar.find(wisdomInJar => wisdomInJar.id === 
       wisdom.id)) {
       this.props.keepInJar(wisdom);
@@ -81,25 +81,25 @@ export class Cookie extends Component {
         }
 
         { this.state.revealWisdom &&
-          <div>
+          <div className='Wisdom'>
             <div className='wisdom-wrapper'>
               <p className='message'>
-                {this.state.wisdom.message}
+                  {this.state.wisdom.message}
               </p>
               <img src={wisdom}
                 className='wisdom-paper'
                 alt="Wisdom on a paper"
                 onClick={this.eatCookie} />
-            </div>   
-            <div className='putjar-btn'>
-              <img src={toJar}
-                className='to-jar'
-                alt="A jar to throw in wisdoms"
-                onClick={this.putWisdomInJar} />
-              <p className='btn-txt'>
-                Keep wisdom in a jar
-              </p>
-            </div>
+             </div>  
+              <div className='putjar-btn'>
+                <img src={toJar}
+                  className='to-jar'
+                  alt="A jar to throw in wisdoms"
+                  onClick={this.putWisdomInJar} />
+                <p className='btn-txt'>
+                  - Keep Wisdom -
+                </p>
+              </div>
           </div>      
         }
       </div> 
