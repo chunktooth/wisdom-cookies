@@ -5,25 +5,20 @@ import PropTypes from 'prop-types';
 import './WisdomInJar.css';
 
 export class WisdomInJar extends Component {
-  constructor(props) {
-    super(props);
-    this.wisdomFromJar = {
-      ...this.props.wisdom
-    };
-  }
 
-  removeFromJar = (wisdomFromJar) => {
-    this.props.trashFromJar(wisdomFromJar);
+  removeFromJar = (id) => {
+    console.log(id)
   }
 
   render() {
     const { wisdom } = this.props;
+    console.log(wisdom)
    
     return (
       <div>
-        <p className='wisdom-message'>{wisdom} </p>
+        <p className='wisdom-message'>{wisdom}</p>
         <button 
-          onClick={this.removeFromJar()}
+          onClick={this.removeFromJar(wisdom.id)}
           className='delete-btn'>[ X ]</button>
       </div>
     );

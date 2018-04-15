@@ -20,3 +20,12 @@ export const mockJar = [
     'id': '1234'
   }
 ];
+
+export const mockMoonphases = [{
+  "Error":0,
+  "TargetDate":"1523807073770",
+  "Moon":["Thunder Moon"],
+  "Phase":"Waxing Crescent",
+  "Distance":363468.16,
+  "DistanceToSun":151945827.15136
+}];

@@ -4,11 +4,10 @@ import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
 import Jar from '../Jar/Jar';
 import { getWisdoms } from '../../cleaners/getWisdoms';
-// import { getAstro } from '../../cleaners/getAstro';
-import { loadWisdoms } from '../../actions';
+import { getMoons } from '../../cleaners/getMoons';
+import { loadWisdoms, loadMoons } from '../../actions';
 import dragon from '../../images/dragon.png';
 import wisdomJar from '../../images/wisdom-jar.png';
-
 import PropTypes from 'prop-types';
 import './App.css';
 
@@ -17,8 +16,8 @@ export class App extends Component {
   async componentDidMount() {
     const wisdoms = await getWisdoms();    
     this.props.loadWisdoms(wisdoms);
-    // const astro = await getAstro();
-    // console.log(astro);
+    const moonphases = await getMoons();
+    this.props.loadMoons(moonphases);
   }
 
   render() {
@@ -47,13 +46,14 @@ export class App extends Component {
       
       <div className='columns'> 
         <div className='left-column'> 
+
           <Cookie />
         </div>
         <div className='right-column'>
-        </div>
           <Route exact path='/cookie'
             component={ Jar } />
-
+        </div>
+      </div>
       </div>
     );
   }
@@ -68,7 +68,8 @@ export const mapStateToProps = (state) => {
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    loadWisdoms: (wisdoms) => (dispatch(loadWisdoms(wisdoms)))
+    loadWisdoms: (wisdoms) => (dispatch(loadWisdoms(wisdoms))),
+    loadMoons: (moonphases) => (dispatch(loadMoons(moonphases)))
   };
 };
 
@@ -76,6 +77,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 
 App.propTypes = {
   loadWisdoms: PropTypes.func,
+  loadMoons: PropTypes.func,
   wisdoms: PropTypes.array,
   jar: PropTypes.array
 };

@@ -6,16 +6,20 @@ import { shallow } from 'enzyme';
 import { mockJar, 
   mockWisdoms } from '../../mockData';
 import { getWisdoms } from '../../cleaners/getWisdoms';
+import { getMoons } from '../../cleaners/getMoons';
 jest.mock('../../cleaners/getWisdoms');
+jest.mock('../../cleaners/getMoons');
 
 describe('App', () => {
   let wrapper;
   const mockLoadWisdoms = jest.fn();
+  const mockLoadMoons = jest.fn();
     
   beforeEach(() => {
     wrapper = shallow(<App 
       jar={mockJar}
-      loadWisdoms={mockLoadWisdoms} />,
+      loadWisdoms={mockLoadWisdoms} 
+      loadMoons={mockLoadMoons} />,
     { disableLifecycleMethods: true });
   });
 
@@ -42,6 +46,13 @@ describe('App', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.loadWisdoms();
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+
+  it('should map loadMoons dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.loadMoons();
     expect(mockDispatch).toHaveBeenCalled();
   });
 

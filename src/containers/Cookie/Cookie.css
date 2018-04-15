@@ -38,25 +38,19 @@
   top: 320px;
   left: -66px;
   transform: rotate(-6deg);
-  z-index: 0;
+  z-index: 2;
 }
 
 .right-cookie-broken {
   left: 468px;
   transform: rotate(-16deg);
-  z-index: 0;
+  z-index: 2;
 }
-
-.Wisdom {
-  width: 50%;
-}
-
 
 .wisdom-wrapper {
   position: absolute;
   top: 380px;
   width: 50%;
-  z-index: 0;
   margin: auto 0;
 }
 
@@ -69,25 +63,20 @@
   font-size: .8em;
   font-weight: bold;
   margin: 0;
-  z-index: 7;
 }
 
-.pop-up-btns {
+.put-inna-jar,
+.eat-another-cookie {
   display: inline-block;
-  width: 100%;
-  top: 100px;
+  position: relative;
+  top: 7px;
+  margin-right: 2%;
 }
 
-.put-in-jar,
-.eat-another {
-  display: inline-block;
-}
-
-.to-jar {
-  width: 80px;
+.to-jar,
+.eat-cookie {
   cursor: pointer;
   box-shadow: 0px 0px 10px 2px #FFF;
-  padding-bottom: 4.5px;
 }
 
 .to-jar:hover,
@@ -95,8 +84,13 @@
   box-shadow: 0px 0px 20px 2px #FFF;
 }
 
+.to-jar {
+  width: 80px;
+  padding-bottom: 4.5px;
+}
+
 .eat-cookie {
-  box-shadow: 0px 0px 10px 2px #FFF;
+  width: 80px;
   padding: 10px 0;
 }
 

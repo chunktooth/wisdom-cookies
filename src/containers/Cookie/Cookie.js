@@ -66,7 +66,7 @@ export class Cookie extends Component {
       true ? 'right-cookie-broken' : '';
 
     return (
-      <div className='Cookie'>
+      <div>
           
         { !this.state.broken && 
           <div className='cookie-container'>
@@ -91,27 +91,24 @@ export class Cookie extends Component {
                 className='wisdom-paper'
                 alt="Wisdom on a paper"
                 onClick={this.eatCookie} />
-             </div> 
-            <div className='pop-up-btns'>
-              <div className='put-in-jar'>
-              <img src={toJar}
-                className='to-jar'
-                alt="A jar to throw in wisdoms"
-                onClick={this.putWisdomInJar} />
-              <p className='btn-txt'>
-                - Keep Wisdom -
-              </p>
-              </div>
-              <div src='eat-another'>
-              <img src={eatCookie}
-                className='eat-cookie'
-                alt="Eat another cookie"
-                onClick={this.eatCookie} />
-              <p className='btn-txt'>
-                - Eat Another -
-              </p>
-              </div>
+            </div> 
+          
+            <div className='put-inna-jar'>
+            <img src={toJar}
+              className='to-jar'
+              alt="A jar to throw in wisdoms"
+              onClick={this.putWisdomInJar} />
+            <p className='btn-txt'>Keep Wisdom</p>
             </div>
+
+            <div className='eat-another-cookie'>
+            <img src={eatCookie}
+              className='eat-cookie'
+              alt="Eat another cookie"
+              onClick={this.eatCookie} />
+            <p className='btn-txt'>Eat Another!</p>
+            </div>
+
           </div>      
         }
       </div> 
@@ -137,7 +134,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Cookie);
 Cookie.propTypes = {
   keepInJar: PropTypes.func,
   wisdoms: PropTypes.array,
-  jar: PropTypes.array,
+  jar: PropTypes.array
   // wisdoms: PropTypes.oneOfType([
   //   PropTypes.object,
   //   PropTypes.array

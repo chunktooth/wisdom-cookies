@@ -12,3 +12,8 @@ export const trashFromJar = (id) => ({
   type: 'TRASH_FROM_JAR',
   id
 });
+
+export const loadMoons = (moonphases) => ({
+  type: 'LOAD_MOONS',
+  moonphases
+});

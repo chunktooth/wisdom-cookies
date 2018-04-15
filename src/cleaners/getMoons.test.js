@@ -1,17 +1,17 @@
-import { getWisdoms } from './getWisdoms';
-import { mockWisdoms } from '../mockData';
+import { getMoons } from './getMoons';
+import { mockMoonphases } from '../mockData';
 
-describe('getWisdoms', () => {
+describe('getMoons', () => {
 
-  it('should get wisdoms', async() => {
+  it('should get moonphases', async() => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
-      json: () => Promise.resolve(mockWisdoms)
+      json: () => Promise.resolve(mockMoonphases)
     }));
 
-    const received = await getWisdoms();
+    const received = await getMoons();
 
-    expect(received).toEqual(mockWisdoms);
+    expect(received).toEqual(mockMoonphases);
   });
 
   it('should throw an error in case of bad response', () => {
@@ -20,7 +20,7 @@ describe('getWisdoms', () => {
     }));
 
     const expected = Error(`Caught error: ${error.message}`);
-    expect(getWisdoms()).rejects.toEqual(expected);
+    expect(getMoons()).rejects.toEqual(expected);
   });
 
 });
