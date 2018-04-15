@@ -30,23 +30,27 @@ export class App extends Component {
             Choose wisdom to guide your fortune
           </h4>
         </header>
-        <section className='nav-bar'>
-           <div className='keepjar-btn'>
-            <NavLink to='/jar'
-              id='jar'
-              className='nav'>
-              <img src={wisdomJar}
-                className='wisdom-jar' 
-                alt="Revisit a jar of wisdoms" />
-              <p className='btn-txt'>
-                {`(${this.props.jar.length})
-                Wisdom in Jar`}
-              </p>
-            </NavLink>
-          </div>
-        </section>
-         
+       
+       <div className='keep-injar-btn'>
+        <NavLink to='/jar'
+          id='jar'
+          className='nav'>
+          <img src={wisdomJar}
+            className='wisdom-jar' 
+            alt="Revisit a jar of wisdoms" />
+          <p className='btn-txt'>
+            {`(${this.props.jar.length})
+            Wisdom in Jar`}
+          </p>
+        </NavLink>
+      </div>
+      
+      <div className='columns'> 
+        <div className='left-column'> 
           <Cookie />
+        </div>
+        <div className='right-column'>
+        </div>
           <Route exact path='/cookie'
             component={ Jar } />
 

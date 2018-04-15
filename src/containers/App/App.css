@@ -39,7 +39,7 @@
   font-size: 1em;
 }
 
-.nav-bar {
+.keep-injar-btn {
   position: absolute;
   width: 100%;
   top: 173px;
@@ -69,4 +69,16 @@
 .eat-cookie {
   width: 80px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 555px) {
+  .title {
+    font-size: 1.5em;
+  }
+  .under-title {
+    font-size: .8em;
+  }
+  .nav-bar {
+    top: 150px;
+  }
 }

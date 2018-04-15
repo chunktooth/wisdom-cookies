@@ -72,9 +72,15 @@
   z-index: 7;
 }
 
-.putjar-btn {
-  position: relative;
-  top: -370px;
+.pop-up-btns {
+  display: inline-block;
+  width: 100%;
+  top: 100px;
+}
+
+.put-in-jar,
+.eat-another {
+  display: inline-block;
 }
 
 .to-jar {
@@ -84,10 +90,27 @@
   padding-bottom: 4.5px;
 }
 
-.to-jar:hover {
+.to-jar:hover,
+.eat-cookie:hover {
   box-shadow: 0px 0px 20px 2px #FFF;
+}
+
+.eat-cookie {
+  box-shadow: 0px 0px 10px 2px #FFF;
+  padding: 10px 0;
 }
 
 .btn-txt {
   margin: 0;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.left-column,
+.right-column {
+  width: 50%;
 }

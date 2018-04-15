@@ -5,28 +5,26 @@ import PropTypes from 'prop-types';
 import './WisdomInJar.css';
 
 export class WisdomInJar extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.wisdomFromJar = {
-  //     ...this.props.wisdom
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.wisdomFromJar = {
+      ...this.props.wisdom
+    };
+  }
 
-  // removeFromJar = (wisdomFromJar) => {
-  //   this.props.trashFromJar(wisdomFromJar);
-  // }
+  removeFromJar = (wisdomFromJar) => {
+    this.props.trashFromJar(wisdomFromJar);
+  }
 
   render() {
     const { wisdom } = this.props;
    
     return (
       <div>
-        <p className='wisdom-message'>
-          {wisdom}
-        </p>
+        <p className='wisdom-message'>{wisdom} </p>
         <button 
-          // onClick={this.removeFromJar()}
-          className='delete-btn'>X</button>
+          onClick={this.removeFromJar()}
+          className='delete-btn'>[ X ]</button>
       </div>
     );
   } 

@@ -4,6 +4,7 @@ import { keepInJar } from '../../actions';
 import leftCookie from '../../images/left-cookie.png';
 import rightCookie from '../../images/right-cookie.png';
 import wisdom from '../../images/wisdom-paper.jpg';
+import eatCookie from '../../images/eat-cookie.png';
 import toJar from '../../images/put-inna-jar.png';
 import PropTypes from 'prop-types';
 import './Cookie.css';
@@ -90,16 +91,27 @@ export class Cookie extends Component {
                 className='wisdom-paper'
                 alt="Wisdom on a paper"
                 onClick={this.eatCookie} />
-             </div>  
-              <div className='putjar-btn'>
-                <img src={toJar}
-                  className='to-jar'
-                  alt="A jar to throw in wisdoms"
-                  onClick={this.putWisdomInJar} />
-                <p className='btn-txt'>
-                  - Keep Wisdom -
-                </p>
+             </div> 
+            <div className='pop-up-btns'>
+              <div className='put-in-jar'>
+              <img src={toJar}
+                className='to-jar'
+                alt="A jar to throw in wisdoms"
+                onClick={this.putWisdomInJar} />
+              <p className='btn-txt'>
+                - Keep Wisdom -
+              </p>
               </div>
+              <div src='eat-another'>
+              <img src={eatCookie}
+                className='eat-cookie'
+                alt="Eat another cookie"
+                onClick={this.eatCookie} />
+              <p className='btn-txt'>
+                - Eat Another -
+              </p>
+              </div>
+            </div>
           </div>      
         }
       </div> 
