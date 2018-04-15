@@ -47,7 +47,7 @@ export class Cookie extends Component {
   putWisdomInJar = () => {
     let { jar } = this.props;
     let { wisdom } = this.state;
-  
+    
     if (!jar.find(wisdomInJar => wisdomInJar.id === 
       wisdom.id)) {
       this.props.keepInJar(wisdom);
@@ -59,7 +59,7 @@ export class Cookie extends Component {
   }
 
   render() {
-    let leftCookieState = this.state.brokenCookie === 
+    let leftCookieState = this.state.brokenCookie ===
       true ? 'left-cookie-broken' : '';
     let rightCookieState = this.state.brokenCookie ===
       true ? 'right-cookie-broken' : '';
@@ -125,5 +125,9 @@ export default connect(mapStateToProps, mapDispatchToProps)(Cookie);
 Cookie.propTypes = {
   keepInJar: PropTypes.func,
   wisdoms: PropTypes.array,
-  jar: PropTypes.array
+  jar: PropTypes.array,
+  // wisdoms: PropTypes.oneOfType([
+  //   PropTypes.object,
+  //   PropTypes.array
+  // ])
 };

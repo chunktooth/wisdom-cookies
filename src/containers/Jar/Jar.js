@@ -8,7 +8,7 @@ export const Jar = ({ jar }) => {
   const wisdomCollection = jar.map(wisdom => {
 
     return <WisdomInJar 
-      {...wisdom}
+      wisdom={wisdom}
       key={wisdom.id} />;
   }); 
 

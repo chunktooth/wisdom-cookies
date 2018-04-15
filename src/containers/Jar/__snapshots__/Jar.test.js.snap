@@ -9,11 +9,11 @@ ShallowWrapper {
         Array [
             Object {
               "id": "5280",
-              "message": "Mankind is unkind, man..",
+              "message": "Mankind is unkind, man",
             },
             Object {
               "id": "1234",
-              "message": "Godluck and Goodspeeeed!",
+              "message": "Godluck and Goodspeed!",
             },
           ]
     }
@@ -33,11 +33,11 @@ ShallowWrapper {
       "children": Array [
         <Connect(Component)
           id="5280"
-          message="Mankind is unkind, man.."
+          message="Mankind is unkind, man"
 />,
         <Connect(Component)
           id="1234"
-          message="Godluck and Goodspeeeed!"
+          message="Godluck and Goodspeed!"
 />,
       ],
       "className": "wisdom-collection",
@@ -50,7 +50,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "id": "5280",
-          "message": "Mankind is unkind, man..",
+          "message": "Mankind is unkind, man",
         },
         "ref": null,
         "rendered": null,
@@ -62,7 +62,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "id": "1234",
-          "message": "Godluck and Goodspeeeed!",
+          "message": "Godluck and Goodspeed!",
         },
         "ref": null,
         "rendered": null,
@@ -80,11 +80,11 @@ ShallowWrapper {
         "children": Array [
           <Connect(Component)
             id="5280"
-            message="Mankind is unkind, man.."
+            message="Mankind is unkind, man"
 />,
           <Connect(Component)
             id="1234"
-            message="Godluck and Goodspeeeed!"
+            message="Godluck and Goodspeed!"
 />,
         ],
         "className": "wisdom-collection",
@@ -97,7 +97,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "id": "5280",
-            "message": "Mankind is unkind, man..",
+            "message": "Mankind is unkind, man",
           },
           "ref": null,
           "rendered": null,
@@ -109,7 +109,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "id": "1234",
-            "message": "Godluck and Goodspeeeed!",
+            "message": "Godluck and Goodspeed!",
           },
           "ref": null,
           "rendered": null,

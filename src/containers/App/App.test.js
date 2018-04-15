@@ -1,13 +1,22 @@
 import React from 'react';
-import { App , mapStateToProps, mapDispatchToProps } from './App';
+import { App, 
+  mapStateToProps, 
+  mapDispatchToProps } from './App';
 import { shallow } from 'enzyme';
+import { mockJar, 
+  mockWisdoms } from '../../mockData';
+import { getWisdoms } from '../../cleaners/getWisdoms';
+jest.mock('../../cleaners/getWisdoms');
 
 describe('App', () => {
   let wrapper;
-
+  const mockLoadWisdoms = jest.fn();
+    
   beforeEach(() => {
-    wrapper = shallow(<App />,
-      { disableLifecycleMethods: true });
+    wrapper = shallow(<App 
+      jar={mockJar}
+      loadWisdoms={mockLoadWisdoms} />,
+    { disableLifecycleMethods: true });
   });
 
   it.skip('should match the snapshot', () => {
@@ -20,10 +29,20 @@ describe('App', () => {
   });
 
   it('should map jar state to props', () => {
-    const mockJar = { jar: [{ 
-      message: 'You only live twice' }]};
     const mappedJar = mapStateToProps(mockJar);
     expect(mappedJar.jar).toEqual(mockJar.jar);
+  });
+
+  it('should map wisdoms state to props', () => {
+    const mappedWisdoms = mapStateToProps(mockWisdoms);
+    expect(mappedWisdoms.wisdoms).toEqual(mappedWisdoms.wisdoms);
+  });
+
+  it('should map loadWisdoms dispatch to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.loadWisdoms();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 
 });

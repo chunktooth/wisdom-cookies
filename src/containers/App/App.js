@@ -18,7 +18,8 @@ export class App extends Component {
   async componentDidMount() {
     const wisdoms = await getWisdoms();    
     this.props.loadWisdoms(wisdoms);
-
+    // const astro = await getAstro();
+    // console.log(astro);
   }
 
   render() {
