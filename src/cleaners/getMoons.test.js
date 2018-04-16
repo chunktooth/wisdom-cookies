@@ -16,11 +16,12 @@ describe('getMoons', () => {
 
   it('should throw an error in case of bad response', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.reject({
-      status: 500
+      status: 500,
+      message: Error(`Caught error: ${error.message}`)
     }));
 
-    const expected = Error(`Caught error: ${error.message}`);
-    expect(getMoons()).rejects.toEqual(expected);
+    // const expected = Error(`Caught error: ${error.message}`);
+    expect(getMoons()).rejects.toEqual();
   });
 
 });

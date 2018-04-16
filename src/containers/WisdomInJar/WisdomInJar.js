@@ -6,19 +6,18 @@ import './WisdomInJar.css';
 
 export class WisdomInJar extends Component {
 
-  removeFromJar = (id) => {
-    console.log(id)
+  removeFromJar = () => {
+    this.props.trashFromJar(this.props.wisdom.id);
   }
 
   render() {
-    const { wisdom } = this.props;
-    console.log(wisdom)
-   
     return (
       <div>
-        <p className='wisdom-message'>{wisdom}</p>
+        <p className='wisdom-message'>
+          {this.props.wisdom.message}
+        </p>
         <button 
-          onClick={this.removeFromJar(wisdom.id)}
+          onClick={this.removeFromJar}
           className='delete-btn'>[ X ]</button>
       </div>
     );
@@ -27,8 +26,8 @@ export class WisdomInJar extends Component {
 
 export const mapStateToProps = (state) => {
   return {
-    wisdom: state.wisdom,
     jar: state.jar
+
   };
 };
 
@@ -41,9 +40,5 @@ export const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, mapDispatchToProps)(WisdomInJar);
 
 WisdomInJar.propTypes = {
-  trashFromJar: PropTypes.func
-  // wisdomFromJar: PropTypes.oneOfType([
-  //   PropTypes.object,
-  //   PropTypes.array
-  // ])
+  trashFromJar: PropTypes.func,
 };

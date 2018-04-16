@@ -6,10 +6,13 @@ import { shallow } from 'enzyme';
 import { mockJar, mockWisdoms } from '../../mockData';
 
 describe('Cookie', () => {
-  let wrapper;
+  let wrapper, mockKeepInjar;
 
   beforeEach(() => {
-    wrapper = shallow(<Cookie />);
+    wrapper = shallow(<Cookie 
+      keepInJar={mockKeepInJar}
+      jar={mockJar} 
+      wisdoms={mockWisdoms} />);
   });
 
   it.skip('should match the snapshot', () => {
@@ -26,7 +29,7 @@ describe('Cookie', () => {
     expect(mappedWisdoms.wisdoms).toEqual(mappedWisdoms.wisdoms);
   });
 
-  it('should map keepInJar dispatch to props', () => {
+  it('should dispatch keepInJar to props', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.keepInJar();

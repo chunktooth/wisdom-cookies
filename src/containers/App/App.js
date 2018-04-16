@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Route, NavLink, withRouter } from 'react-router-dom';
+// import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
 import Jar from '../Jar/Jar';
 import { getWisdoms } from '../../cleaners/getWisdoms';
 import { getMoons } from '../../cleaners/getMoons';
 import { loadWisdoms, loadMoons } from '../../actions';
-import dragon from '../../images/dragon.png';
-import wisdomJar from '../../images/wisdom-jar.png';
+// import dragon from '../../images/dragon.png';
+
 import PropTypes from 'prop-types';
 import './App.css';
 
@@ -23,37 +23,21 @@ export class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header className='App-header'>
-          <h1 className="title">Wi$dom Co0kies</h1>
-          <h4 className="under-title">
-            Choose wisdom to guide your fortune
-          </h4>
-        </header>
-       
-       <div className='keep-injar-btn'>
-        <NavLink to='/jar'
-          id='jar'
-          className='nav'>
-          <img src={wisdomJar}
-            className='wisdom-jar' 
-            alt="Revisit a jar of wisdoms" />
-          <p className='btn-txt'>
-            {`(${this.props.jar.length})
-            Wisdom in Jar`}
-          </p>
-        </NavLink>
-      </div>
       
-      <div className='columns'> 
-        <div className='left-column'> 
-
+        <div className='left-column'>   
+          <header className='App-header'>
+            <h1 className="title">Wi$dom Co0kies</h1>
+            <h4 className="under-title">
+              Choose wisdom to guide your fortune
+            </h4>
+          </header>  
           <Cookie />
         </div>
+
         <div className='right-column'>
-          <Route exact path='/cookie'
-            component={ Jar } />
+          <Jar />
         </div>
-      </div>
+
       </div>
     );
   }
@@ -62,7 +46,8 @@ export class App extends Component {
 export const mapStateToProps = (state) => {
   return {
     wisdoms: state.wisdoms,
-    jar: state.jar
+    jar: state.jar,
+    moonphases: state.moonphases
   };
 };
 
@@ -73,7 +58,7 @@ export const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 App.propTypes = {
   loadWisdoms: PropTypes.func,

@@ -4,7 +4,8 @@ import { App,
   mapDispatchToProps } from './App';
 import { shallow } from 'enzyme';
 import { mockJar, 
-  mockWisdoms } from '../../mockData';
+  mockWisdoms,
+  mockMoonphases } from '../../mockData';
 import { getWisdoms } from '../../cleaners/getWisdoms';
 import { getMoons } from '../../cleaners/getMoons';
 jest.mock('../../cleaners/getWisdoms');
@@ -32,6 +33,11 @@ describe('App', () => {
     await expect(getWisdoms).toHaveBeenCalled();
   });
 
+   it('should fetch and load moons into store', async () => {
+    await wrapper.instance().componentDidMount();
+    await expect(getMoons).toHaveBeenCalled();
+  });
+
   it('should map jar state to props', () => {
     const mappedJar = mapStateToProps(mockJar);
     expect(mappedJar.jar).toEqual(mockJar.jar);
@@ -39,17 +45,22 @@ describe('App', () => {
 
   it('should map wisdoms state to props', () => {
     const mappedWisdoms = mapStateToProps(mockWisdoms);
-    expect(mappedWisdoms.wisdoms).toEqual(mappedWisdoms.wisdoms);
+    expect(mappedWisdoms.wisdoms).toEqual(mockWisdoms.wisdoms);
   });
 
-  it('should map loadWisdoms dispatch to props', () => {
+  it('should map moonphases state to props', () => {
+    const mappedMoonphases = mapStateToProps(mockMoonphases);
+    expect(mappedMoonphases.moonphases).toEqual(mockMoonphases.moonphases);
+  });
+
+  it('should dispatch loadWisdoms to props', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.loadWisdoms();
     expect(mockDispatch).toHaveBeenCalled();
   });
 
-  it('should map loadMoons dispatch to props', () => {
+  it('should dispatch loadMoons to props', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
     mapped.loadMoons();

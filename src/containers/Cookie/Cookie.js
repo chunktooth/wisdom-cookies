@@ -4,8 +4,9 @@ import { keepInJar } from '../../actions';
 import leftCookie from '../../images/left-cookie.png';
 import rightCookie from '../../images/right-cookie.png';
 import wisdom from '../../images/wisdom-paper.jpg';
-import eatCookie from '../../images/eat-cookie.png';
 import toJar from '../../images/put-inna-jar.png';
+import eatCookie from '../../images/eat-cookie.png';
+import wisdomJar from '../../images/wisdom-jar.png';
 import PropTypes from 'prop-types';
 import './Cookie.css';
 
@@ -66,8 +67,7 @@ export class Cookie extends Component {
       true ? 'right-cookie-broken' : '';
 
     return (
-      <div>
-          
+      <div className='Cookie'>      
         { !this.state.broken && 
           <div className='cookie-container'>
             <img src={leftCookie}
@@ -81,6 +81,16 @@ export class Cookie extends Component {
           </div>
         }
 
+          <div className='jar-o-wisdom'>
+            <img src={wisdomJar}
+              className='wisdom-jar' 
+              alt="Revisit a jar of wisdoms" />
+            <p className='btn-txt'>
+              {`(${this.props.jar.length})
+              Wisdom in Jar`}
+            </p>
+          </div>
+
         { this.state.revealWisdom &&
           <div className='Wisdom'>
             <div className='wisdom-wrapper'>
@@ -93,22 +103,23 @@ export class Cookie extends Component {
                 onClick={this.eatCookie} />
             </div> 
           
+          <div className='btn-flex'>
             <div className='put-inna-jar'>
-            <img src={toJar}
-              className='to-jar'
-              alt="A jar to throw in wisdoms"
-              onClick={this.putWisdomInJar} />
-            <p className='btn-txt'>Keep Wisdom</p>
+              <img src={toJar}
+                className='to-jar'
+                alt="A jar to throw in wisdoms"
+                onClick={this.putWisdomInJar} />
+              <p className='btn-txt'>Keep Wisdom</p>
             </div>
 
             <div className='eat-another-cookie'>
-            <img src={eatCookie}
-              className='eat-cookie'
-              alt="Eat another cookie"
-              onClick={this.eatCookie} />
-            <p className='btn-txt'>Eat Another!</p>
+              <img src={eatCookie}
+                className='eat-cookie'
+                alt="Eat another cookie"
+                onClick={this.eatCookie} />
+              <p className='btn-txt'>Eat Another!</p>
             </div>
-
+          </div>
           </div>      
         }
       </div> 

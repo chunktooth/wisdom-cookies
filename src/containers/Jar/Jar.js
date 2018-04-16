@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import WisdomInJar from '../WisdomInJar/WisdomInJar';
 import PropTypes from 'prop-types';
-import { emptyJar } from '../../images/empty-jar.png';
+import emptyJar from '../../images/empty-jar.png';
 import './Jar.css';
 
-export const Jar = ({ jar }) => {
-  const wisdomCollection = jar.map(wisdom => {
 
-    return <WisdomInJar 
-      wisdom={wisdom}
-      key={wisdom.id} />;
-  }); 
+export class Jar extends Component {
 
+  wisdomCollection = () => { 
+    return this.props.jar.map(wisdom => {
+      return <WisdomInJar 
+        wisdom={wisdom} 
+        key={wisdom.id} />
+    });
+  }
+ 
+ render() {
   return (
     <div className='wisdom-collection'>
       <img src={emptyJar}
-        className='empty-jar' 
-        alt="A jar of wisdom collection" />
-      {wisdomCollection}
+          className='empty-jar' 
+          alt="A jar of wisdom collection" />
+        {this.wisdomCollection()}
     </div>
-  );  
-};
+  );      
+ }
+}
 
 export const mapStateToProps = (state) => {
   return {

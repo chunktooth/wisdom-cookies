@@ -3,14 +3,12 @@ import { WisdomInJar,
   mapStateToProps,
   mapDispatchToProps } from './WisdomInJar';
 import { shallow } from 'enzyme';
-import { mockJar } from '../../mockData';
+import { mockWisdom, mockJar } from '../../mockData';
 
 describe('WisdomInJar', () => {
   let wrapper;
 
   beforeEach(() => {
-    // mockMessage = 'Fear is the mind killer..';
-    // mockId = '900';
     wrapper = shallow(<WisdomInJar 
       jar={mockJar} />);
   });
@@ -19,9 +17,21 @@ describe('WisdomInJar', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should map state to props', () => {
+  it('should map wisdom state to props', () => {
+    const mappedWisdom = mapStateToProps(mockWisdom);
+    expect(mappedWisdom.wisdom).toEqual(mockWisdom.wisdom);
+  });
+
+  it('should map jar state to props', () => {
     const mappedJar = mapStateToProps(mockJar);
     expect(mappedJar.jar).toEqual(mockJar.jar);
+  });
+
+  it('should dispatch trashFromJar to props', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+    mapped.trashFromJar();
+    expect(mockDispatch).toHaveBeenCalled();
   });
 
 });

@@ -56,7 +56,7 @@
 
 .message {
   position: absolute;
-  top: 40px;
+  top: 36px;
   left: 197px;
   width: 320px;
   color: #3A4B77;
@@ -65,22 +65,37 @@
   margin: 0;
 }
 
+.btn-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly; 
+}
+
 .put-inna-jar,
 .eat-another-cookie {
-  display: inline-block;
+  /*display: inline-block;*/
   position: relative;
-  top: 7px;
-  margin-right: 2%;
+  top: -113px;
+  margin: 0 15Ypx;
+}
+
+.jar-o-wisdom {
+  position: relative;
+  display: inline-block;
+  top: 0;
 }
 
 .to-jar,
-.eat-cookie {
+.eat-cookie,
+.wisdom-jar {
   cursor: pointer;
   box-shadow: 0px 0px 10px 2px #FFF;
 }
 
 .to-jar:hover,
-.eat-cookie:hover {
+.eat-cookie:hover,
+.wisdom-jar:hover {
   box-shadow: 0px 0px 20px 2px #FFF;
 }
 
@@ -92,6 +107,11 @@
 .eat-cookie {
   width: 80px;
   padding: 10px 0;
+}
+
+.wisdom-jar {
+  width: 70px;
+  padding: 7px;
 }
 
 .btn-txt {
