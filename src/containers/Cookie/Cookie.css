@@ -15,18 +15,18 @@
 }
 
 .left-cookie {
-  top: 295px;
+  top: 346px;
   /*left: 469px;*/
   /*top: 250px;*/
   left: 100px;
-  width: 320px;
+  width: 322px;
   z-index: 2;
-  transform: rotate(-6deg);
+  transform: rotate(-20deg);
 }
 
 .right-cookie {
-  top: 300px;
-  left: 270px;
+  top: 333px;
+  left: 240px;
   width: 280px;
   z-index: 1;
   -webkit-transform: rotate(-20deg);
@@ -36,13 +36,14 @@
 
 .left-cookie-broken {
   top: 320px;
-  left: -66px;
+  left: -130px;
   transform: rotate(-6deg);
   z-index: 2;
 }
 
 .right-cookie-broken {
-  left: 468px;
+  top: 290px;
+  left: 410px;
   transform: rotate(-16deg);
   z-index: 2;
 }

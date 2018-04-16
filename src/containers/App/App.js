@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-// import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
 import Jar from '../Jar/Jar';
 import { getWisdoms } from '../../cleaners/getWisdoms';
 import { getMoons } from '../../cleaners/getMoons';
 import { loadWisdoms, loadMoons } from '../../actions';
-// import dragon from '../../images/dragon.png';
+import dragon from '../../images/dragon.png';
 
 import PropTypes from 'prop-types';
 import './App.css';
@@ -30,9 +29,12 @@ export class App extends Component {
             <h4 className="under-title">
               Choose wisdom to guide your fortune
             </h4>
-          </header>  
+          </header>
+          <img src={dragon}
+            className='dragon'
+            alt='A Chinese dragon soaring' />  
           <Cookie />
-        </div>
+          </div>
 
         <div className='right-column'>
           <Jar />
