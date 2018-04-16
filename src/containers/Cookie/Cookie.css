@@ -1,12 +1,3 @@
-.Cookie {
-  width: 100%;
-  margin: auto 0;
-}
-
-.cookie-container {
-  width: 100%;
-}
-
 .left-cookie, .right-cookie {
   position: absolute;
   /*display: inline-block;*/

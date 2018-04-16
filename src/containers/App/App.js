@@ -21,8 +21,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div className='App'>
-      
+      <div className='App'>  
         <div className='left-column'>   
           <header className='App-header'>
             <h1 className="title">Wi$dom Co0kies</h1>
@@ -35,11 +34,9 @@ export class App extends Component {
             alt='A Chinese dragon soaring' />  
           <Cookie />
           </div>
-
         <div className='right-column'>
           <Jar />
         </div>
-
       </div>
     );
   }
