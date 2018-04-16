@@ -4,7 +4,7 @@ exports[`Jar should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <Jar
     jar={
         Array [
             Object {
@@ -31,14 +31,29 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Connect(Component)
-          id="5280"
-          message="Mankind is unkind, man"
+        <img
+          alt="A jar of wisdom collection"
+          className="empty-jar"
+          src="empty-jar.png"
 />,
-        <Connect(Component)
-          id="1234"
-          message="Godluck and Goodspeed!"
+        Array [
+          <Connect(WisdomInJar)
+            wisdom={
+                        Object {
+                                    "id": "5280",
+                                    "message": "Mankind is unkind, man",
+                                  }
+            }
 />,
+          <Connect(WisdomInJar)
+            wisdom={
+                        Object {
+                                    "id": "1234",
+                                    "message": "Godluck and Goodspeed!",
+                                  }
+            }
+/>,
+        ],
       ],
       "className": "wisdom-collection",
     },
@@ -46,11 +61,26 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "A jar of wisdom collection",
+          "className": "empty-jar",
+          "src": "empty-jar.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
         "key": "5280",
         "nodeType": "class",
         "props": Object {
-          "id": "5280",
-          "message": "Mankind is unkind, man",
+          "wisdom": Object {
+            "id": "5280",
+            "message": "Mankind is unkind, man",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -61,8 +91,10 @@ ShallowWrapper {
         "key": "1234",
         "nodeType": "class",
         "props": Object {
-          "id": "1234",
-          "message": "Godluck and Goodspeed!",
+          "wisdom": Object {
+            "id": "1234",
+            "message": "Godluck and Goodspeed!",
+          },
         },
         "ref": null,
         "rendered": null,
@@ -78,14 +110,29 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Connect(Component)
-            id="5280"
-            message="Mankind is unkind, man"
+          <img
+            alt="A jar of wisdom collection"
+            className="empty-jar"
+            src="empty-jar.png"
 />,
-          <Connect(Component)
-            id="1234"
-            message="Godluck and Goodspeed!"
+          Array [
+            <Connect(WisdomInJar)
+              wisdom={
+                            Object {
+                                          "id": "5280",
+                                          "message": "Mankind is unkind, man",
+                                        }
+              }
 />,
+            <Connect(WisdomInJar)
+              wisdom={
+                            Object {
+                                          "id": "1234",
+                                          "message": "Godluck and Goodspeed!",
+                                        }
+              }
+/>,
+          ],
         ],
         "className": "wisdom-collection",
       },
@@ -93,11 +140,26 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "A jar of wisdom collection",
+            "className": "empty-jar",
+            "src": "empty-jar.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
           "key": "5280",
           "nodeType": "class",
           "props": Object {
-            "id": "5280",
-            "message": "Mankind is unkind, man",
+            "wisdom": Object {
+              "id": "5280",
+              "message": "Mankind is unkind, man",
+            },
           },
           "ref": null,
           "rendered": null,
@@ -108,8 +170,10 @@ ShallowWrapper {
           "key": "1234",
           "nodeType": "class",
           "props": Object {
-            "id": "1234",
-            "message": "Godluck and Goodspeed!",
+            "wisdom": Object {
+              "id": "1234",
+              "message": "Godluck and Goodspeed!",
+            },
           },
           "ref": null,
           "rendered": null,

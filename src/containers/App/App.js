@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
 import Jar from '../Jar/Jar';
-import { getWisdoms } from '../../cleaners/getWisdoms';
-import { getMoons } from '../../cleaners/getMoons';
+import { getWisdoms } from '../../apiCalls/getWisdoms';
+import { getMoons } from '../../apiCalls/getMoons';
 import { loadWisdoms, loadMoons } from '../../actions';
 import dragon from '../../images/dragon.png';
 
@@ -33,7 +33,7 @@ export class App extends Component {
             className='dragon'
             alt='A Chinese dragon soaring' />  
           <Cookie />
-          </div>
+        </div>
         <div className='right-column'>
           <Jar />
         </div>

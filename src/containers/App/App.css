@@ -31,8 +31,8 @@
   position: absolute;
   top: 10px;
   left: 0;
-  width: 328px;
-  height: 640px;
+  width: 400px;
+  height: 760px;
   z-index: 0;
 }
 
@@ -58,6 +58,7 @@
 .left-column,
 .right-column {
   width: 50%;
+  margin: 130px auto;
 }
 
 @media screen and (max-width: 1111px) {

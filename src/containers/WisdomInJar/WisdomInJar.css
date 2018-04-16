@@ -15,7 +15,7 @@
 .delete-btn {
   background: transparent;
   border: none;
-  display: none;
+  /*display: none;*/
   font-weight: bold;
   z-index: 10; 
 }

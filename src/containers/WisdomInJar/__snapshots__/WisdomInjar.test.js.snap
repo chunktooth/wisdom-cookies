@@ -4,7 +4,7 @@ exports[`WisdomInJar should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <WisdomInJar
     jar={
         Array [
             Object {
@@ -14,6 +14,19 @@ ShallowWrapper {
             Object {
               "id": "1234",
               "message": "Godluck and Goodspeed!",
+            },
+          ]
+    }
+    trashFromJar={[Function]}
+    wisdom={
+        Array [
+            Object {
+              "id": "5280",
+              "message": "Mankind is unkind, man..",
+            },
+            Object {
+              "id": "1234",
+              "message": "Godluck and Goodspeeeed!",
             },
           ]
     }
@@ -38,9 +51,10 @@ ShallowWrapper {
           className="delete-btn"
           onClick={[Function]}
 >
-          X
+          [ X ]
 </button>,
       ],
+      "className": "wisdom-inna-jar",
     },
     "ref": null,
     "rendered": Array [
@@ -61,12 +75,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "X",
+          "children": "[ X ]",
           "className": "delete-btn",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "X",
+        "rendered": "[ X ]",
         "type": "button",
       },
     ],
@@ -86,9 +100,10 @@ ShallowWrapper {
             className="delete-btn"
             onClick={[Function]}
 >
-            X
+            [ X ]
 </button>,
         ],
+        "className": "wisdom-inna-jar",
       },
       "ref": null,
       "rendered": Array [
@@ -109,12 +124,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "X",
+            "children": "[ X ]",
             "className": "delete-btn",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "X",
+          "rendered": "[ X ]",
           "type": "button",
         },
       ],

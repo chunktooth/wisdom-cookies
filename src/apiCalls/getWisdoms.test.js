@@ -14,12 +14,13 @@ describe('getWisdoms', () => {
     expect(received).toEqual(mockWisdoms);
   });
 
-  it.skip('should throw an error in case of bad response', () => {
+  it('should throw an error in case of bad response', () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.reject({
       status: 500
     }));
 
-    const expected = Error(`Caught error: ${error.message}`);
+    const expected = Error(`Caught error: undefined`);
+    
     expect(getWisdoms()).rejects.toEqual(expected);
   });
 

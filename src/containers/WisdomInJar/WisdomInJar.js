@@ -11,8 +11,6 @@ export class WisdomInJar extends Component {
   }
 
   render() {
-     console.log(this.props)
-
     return (
       <div className='wisdom-inna-jar'>
         <p className='wisdom-message'>
@@ -24,7 +22,7 @@ export class WisdomInJar extends Component {
       </div>
     );
   } 
-};
+}
 
 export const mapStateToProps = (state) => {
   return {
@@ -42,4 +40,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(WisdomInJar);
 
 WisdomInJar.propTypes = {
   trashFromJar: PropTypes.func,
+  wisdom: PropTypes.wisdom
 };

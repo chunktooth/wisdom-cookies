@@ -6,10 +6,10 @@ import { shallow } from 'enzyme';
 import { mockJar, 
   mockWisdoms,
   mockMoonphases } from '../../mockData';
-import { getWisdoms } from '../../cleaners/getWisdoms';
-import { getMoons } from '../../cleaners/getMoons';
-jest.mock('../../cleaners/getWisdoms');
-jest.mock('../../cleaners/getMoons');
+import { getWisdoms } from '../../apiCalls/getWisdoms';
+import { getMoons } from '../../apiCalls/getMoons';
+jest.mock('../../apiCalls/getWisdoms');
+jest.mock('../../apiCalls/getMoons');
 
 describe('App', () => {
   let wrapper;
@@ -24,7 +24,7 @@ describe('App', () => {
     { disableLifecycleMethods: true });
   });
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -33,7 +33,7 @@ describe('App', () => {
     await expect(getWisdoms).toHaveBeenCalled();
   });
 
-   it('should fetch and load moons into store', async () => {
+  it('should fetch and load moons into store', async () => {
     await wrapper.instance().componentDidMount();
     await expect(getMoons).toHaveBeenCalled();
   });

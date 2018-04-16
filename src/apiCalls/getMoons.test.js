@@ -14,13 +14,14 @@ describe('getMoons', () => {
     expect(received).toEqual(mockMoonphases);
   });
 
-  it.skip('should throw an error in case of bad response', () => {
+  it('should throw an error in case of bad response', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.reject({
       status: 500
     }));
 
-    const expected = Error(`Caught error: ${error.message}`);
-    expect(getMoons()).rejects.toEqual(expected);
+    const expected = new Error(`Caught error: undefined`);
+    
+    await expect(getMoons()).rejects.toEqual(expected);
   });
 
 });

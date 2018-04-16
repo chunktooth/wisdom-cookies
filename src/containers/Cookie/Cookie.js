@@ -16,8 +16,7 @@ export class Cookie extends Component {
     this.state = {
       revealWisdom: false,
       brokenCookie: false, 
-      wisdom: {},
-      jar: []
+      wisdom: {}
     };
   }
 
@@ -43,7 +42,8 @@ export class Cookie extends Component {
     this.setState({ 
       wisdom: {},
       brokenCookie: false,
-      revealWisdom: false });
+      revealWisdom: false 
+    });
   };
 
   putWisdomInJar = () => {
@@ -81,21 +81,21 @@ export class Cookie extends Component {
           </div>
         }
 
-          <div className='jar-o-wisdom'>
-            <img src={wisdomJar}
-              className='wisdom-jar' 
-              alt="Revisit a jar of wisdoms" />
-            <p className='btn-txt'>
-              {`(${this.props.jar.length})
-              Wisdom in Jar`}
-            </p>
-          </div>
+        <div className='jar-o-wisdom'>
+          <img src={wisdomJar}
+            className='wisdom-jar' 
+            alt="Revisit a jar of wisdoms" />
+          <p className='btn-txt'>
+            {`(${this.props.jar.length})
+            Wisdom in Jar`}
+          </p>
+        </div>
 
         { this.state.revealWisdom &&
           <div className='Wisdom'>
             <div className='wisdom-wrapper'>
               <p className='message'>
-                  {this.state.wisdom.message}
+                {this.state.wisdom.message}
               </p>
               <img src={wisdom}
                 className='wisdom-paper'
@@ -103,23 +103,23 @@ export class Cookie extends Component {
                 onClick={this.eatCookie} />
             </div> 
           
-          <div className='btn-flex'>
-            <div className='put-inna-jar'>
-              <img src={toJar}
-                className='to-jar'
-                alt="A jar to throw in wisdoms"
-                onClick={this.putWisdomInJar} />
-              <p className='btn-txt'>Keep Wisdom</p>
-            </div>
+            <div className='btn-flex'>
+              <div className='put-inna-jar'>
+                <img src={toJar}
+                  className='to-jar'
+                  alt="A jar to throw in wisdoms"
+                  onClick={this.putWisdomInJar} />
+                <p className='btn-txt'>Keep Wisdom</p>
+              </div>
 
-            <div className='eat-another-cookie'>
-              <img src={eatCookie}
-                className='eat-cookie'
-                alt="Eat another cookie"
-                onClick={this.eatCookie} />
-              <p className='btn-txt'>Eat Another!</p>
+              <div className='eat-another-cookie'>
+                <img src={eatCookie}
+                  className='eat-cookie'
+                  alt="Eat another cookie"
+                  onClick={this.eatCookie} />
+                <p className='btn-txt'>Eat Another!</p>
+              </div>
             </div>
-          </div>
           </div>      
         }
       </div> 

@@ -11,7 +11,7 @@ describe('Jar', () => {
     wrapper = shallow(<Jar jar={mockJar}/>);
   });
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
