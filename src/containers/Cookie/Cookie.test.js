@@ -6,9 +6,10 @@ import { shallow } from 'enzyme';
 import { mockJar, mockWisdoms } from '../../mockData';
 
 describe('Cookie', () => {
-  let wrapper, mockKeepInjar;
+  let wrapper, mockKeepInJar;
 
   beforeEach(() => {
+    mockKeepInJar = jest.fn();
     wrapper = shallow(<Cookie 
       keepInJar={mockKeepInJar}
       jar={mockJar} 

@@ -146,8 +146,4 @@ Cookie.propTypes = {
   keepInJar: PropTypes.func,
   wisdoms: PropTypes.array,
   jar: PropTypes.array
-  // wisdoms: PropTypes.oneOfType([
-  //   PropTypes.object,
-  //   PropTypes.array
-  // ])
 };

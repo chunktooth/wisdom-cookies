@@ -7,14 +7,29 @@ import { mockWisdom, mockJar } from '../../mockData';
 
 describe('WisdomInJar', () => {
   let wrapper;
+  const mockTrashFromJar = jest.fn();
 
   beforeEach(() => {
     wrapper = shallow(<WisdomInJar 
-      jar={mockJar} />);
+      jar={mockJar}
+      wisdom={mockWisdom}
+      trashFromJar={mockTrashFromJar} />);
   });
 
   it.skip('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should call trashFromJar when calling removeFromJar', () => {
+    wrapper = shallow(<WisdomInJar 
+      jar={mockJar}
+      wisdom={mockWisdom}
+      trashFromJar={mockTrashFromJar} />);
+
+    console.log(mockWisdom.message)
+    
+    wrapper.instance().removeFromJar();
+    expect(mockTrashFromJar).toHaveBeenCalledWith(mockWisdom.id);
   });
 
   it('should map wisdom state to props', () => {

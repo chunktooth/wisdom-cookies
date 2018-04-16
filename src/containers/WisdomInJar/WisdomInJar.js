@@ -11,8 +11,10 @@ export class WisdomInJar extends Component {
   }
 
   render() {
+     console.log(this.props)
+
     return (
-      <div>
+      <div className='wisdom-inna-jar'>
         <p className='wisdom-message'>
           {this.props.wisdom.message}
         </p>
@@ -27,7 +29,6 @@ export class WisdomInJar extends Component {
 export const mapStateToProps = (state) => {
   return {
     jar: state.jar
-
   };
 };
 
