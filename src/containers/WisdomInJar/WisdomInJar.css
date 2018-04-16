@@ -1,11 +1,31 @@
 .wisdom-message, 
 .delete-btn {
+  position: relative;
   display: inline-block;
+  cursor: pointer;
   color: #FFFFFF;
+  font-size: .9em;
+  z-index: 100;
+}
+
+.wisdom-message:hover + .delete-btn:hover {
+  display: inline-block
 }
 
 .delete-btn {
- /* background: transparent;
-  border: none;*/
-  font-weight: bold
+  background: transparent;
+  border: none;
+  display: none;
+  font-weight: bold;
+  z-index: 10; 
+}
+
+.wisdom-inna-jar {
+  position: relative;
+  top: 20px;
+  right: 34px;
+  width: 330px;
+  z-index: 10;
+  margin: auto;
+  overflow: scroll;
 }

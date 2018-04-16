@@ -6,6 +6,6 @@ export const getWisdoms = async () => {
    
     return wisdoms;
   } catch (error) {
-    throw error;
+    throw new Error(`Caught error: ${error.message}`);
   }
 };
