@@ -1,3 +1,16 @@
+.Cookie {
+  position: absolute;
+  width: 50%;
+}
+
+.jar-o-wisdom {
+  width: 100%;
+}
+
+.cookie-container {
+  position: relative;
+}
+
 .left-cookie, .right-cookie {
   position: absolute;
   /*display: inline-block;*/
@@ -72,12 +85,6 @@
   margin: 0 15Ypx;
 }
 
-.jar-o-wisdom {
-  position: relative;
-  display: inline-block;
-  top: 0;
-}
-
 .to-jar,
 .eat-cookie,
 .wisdom-jar {
@@ -119,4 +126,16 @@
 .left-column,
 .right-column {
   width: 50%;
+}
+
+@media screen and (max-width: 1111px) {
+  .Cookie {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .btn-flex {
+    justify-content: space-around;
+  }
 }

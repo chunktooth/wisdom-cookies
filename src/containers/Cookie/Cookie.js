@@ -68,6 +68,17 @@ export class Cookie extends Component {
 
     return (
       <div className='Cookie'>      
+        
+        <div className='jar-o-wisdom'>
+          <img src={wisdomJar}
+            className='wisdom-jar' 
+            alt="Revisit a jar of wisdoms" />
+          <p className='btn-txt'>
+            {`(${this.props.jar.length})
+            Wisdom in Jar`}
+          </p>
+        </div>
+
         { !this.state.broken && 
           <div className='cookie-container'>
             <img src={leftCookie}
@@ -80,16 +91,6 @@ export class Cookie extends Component {
               onClick={this.eatCookie} /> 
           </div>
         }
-
-        <div className='jar-o-wisdom'>
-          <img src={wisdomJar}
-            className='wisdom-jar' 
-            alt="Revisit a jar of wisdoms" />
-          <p className='btn-txt'>
-            {`(${this.props.jar.length})
-            Wisdom in Jar`}
-          </p>
-        </div>
 
         { this.state.revealWisdom &&
           <div className='Wisdom'>
@@ -122,6 +123,7 @@ export class Cookie extends Component {
             </div>
           </div>      
         }
+
       </div> 
     );
   }
