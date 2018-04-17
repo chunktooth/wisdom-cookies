@@ -1,3 +1,12 @@
+.WisdomInJar {
+  position: relative;
+  top: 20px;
+  right: 34px;
+  width: 330px;
+  z-index: 10;
+  margin: auto;
+}
+
 .wisdom-message, 
 .delete-btn {
   position: relative;
@@ -20,12 +29,3 @@
   z-index: 10; 
 }
 
-.wisdom-inna-jar {
-  position: relative;
-  top: 20px;
-  right: 34px;
-  width: 330px;
-  z-index: 10;
-  margin: auto;
-  overflow: scroll;
-}

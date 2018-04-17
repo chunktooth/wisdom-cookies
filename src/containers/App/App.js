@@ -6,7 +6,6 @@ import { getWisdoms } from '../../apiCalls/getWisdoms';
 import { getMoons } from '../../apiCalls/getMoons';
 import { loadWisdoms, loadMoons } from '../../actions';
 import dragon from '../../images/dragon.png';
-
 import PropTypes from 'prop-types';
 import './App.css';
 

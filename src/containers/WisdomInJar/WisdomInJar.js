@@ -12,7 +12,7 @@ export class WisdomInJar extends Component {
 
   render() {
     return (
-      <div className='wisdom-inna-jar'>
+      <div className='WisdomInJar'>
         <p className='wisdom-message'>
           {this.props.wisdom.message}
         </p>

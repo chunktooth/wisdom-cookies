@@ -51,10 +51,6 @@
   font-size: 1em;
 }
 
-/*.nav {
-  text-decoration: none;
-}
-*/
 .left-column,
 .right-column {
   width: 50%;
@@ -79,8 +75,5 @@
   }
   .under-title {
     font-size: .8em;
-  }
-  .nav-bar {
-    top: 150px;
   }
 }

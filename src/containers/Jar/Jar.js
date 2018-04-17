@@ -18,11 +18,13 @@ export class Jar extends Component {
  
   render() {
     return (
-      <div className='wisdom-collection'>
+      <div className='Jar'>     
+        <div className='wisdom-collection'>
         <img src={emptyJar}
           className='empty-jar' 
-          alt="A jar of wisdom collection" />
-        {this.wisdomCollection()}
+          alt="A jar of many wisdoms" />
+          {this.wisdomCollection()}
+        </div>
       </div>
     );      
   }

@@ -1,22 +1,26 @@
-.wisdom-collection {
-  position: absolute;
-  top: 100px;
-  right: 120px;
-  width: 330px;
+.Jar {
+  position: static;
+  width: 100%;
   height: 600px;
   z-index: 0;
-  overflow: scroll;
 }
 
 .empty-jar {
-  position: absolute;
-  right: 0px;
   width: 400px;
   z-index: 0;
 }
 
+.wisdom-collection {
+  position: inherit;
+  margin: auto;
+  padding: 10px;
+  width: 400px;
+  height: 600px;
+  overflow: scroll;
+}
+
 @media screen and (max-width: 1111px) {
-  .wisdom-collection {
+  .Jar {
     top: 600px;
     right: 0;
     width: 100%;
