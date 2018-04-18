@@ -13,3 +13,5 @@ Built with React Redux, fetched API from http://fortunecookieapi.herokuapp.com/,
 ### Wireframes
 ![B4](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/wisdom-cookie-wireframe.png)
 ![B4](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/wisdom-cookie-wireframe.png)
+
+** Special credits to Ngoc Phan for all the crepes we shared and for getting me out of CSS 'absolute' mayhem!
