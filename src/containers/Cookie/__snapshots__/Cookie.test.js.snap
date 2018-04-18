@@ -45,6 +45,25 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <div
+          className="btn-shelf"
+>
+          <div
+                    className="jar-o-wisdoms"
+          >
+                    <img
+                              alt="Revisit a jar of wisdoms"
+                              className="wisdom-jar"
+                              src="wisdom-jar.png"
+                    />
+                    <p
+                              className="btn-txt"
+                    >
+                              (2)
+                                            Wisdom in Jar
+                    </p>
+          </div>
+</div>,
+        <div
           className="cookie-container"
 >
           <img
@@ -60,27 +79,95 @@ ShallowWrapper {
                     src="right-cookie.png"
           />
 </div>,
-        <div
-          className="jar-o-wisdom"
->
-          <img
-                    alt="Revisit a jar of wisdoms"
-                    className="wisdom-jar"
-                    src="wisdom-jar.png"
-          />
-          <p
-                    className="btn-txt"
-          >
-                    (2)
-                                Wisdom in Jar
-          </p>
-</div>,
         false,
       ],
       "className": "Cookie",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="jar-o-wisdoms"
+>
+              <img
+                            alt="Revisit a jar of wisdoms"
+                            className="wisdom-jar"
+                            src="wisdom-jar.png"
+              />
+              <p
+                            className="btn-txt"
+              >
+                            (2)
+                                          Wisdom in Jar
+              </p>
+</div>,
+            false,
+          ],
+          "className": "btn-shelf",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <img
+                  alt="Revisit a jar of wisdoms"
+                  className="wisdom-jar"
+                  src="wisdom-jar.png"
+/>,
+                <p
+                  className="btn-txt"
+>
+                  (2)
+                                Wisdom in Jar
+</p>,
+              ],
+              "className": "jar-o-wisdoms",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Revisit a jar of wisdoms",
+                  "className": "wisdom-jar",
+                  "src": "wisdom-jar.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "(2)
+              Wisdom in Jar",
+                  "className": "btn-txt",
+                },
+                "ref": null,
+                "rendered": "(2)
+              Wisdom in Jar",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+          false,
+        ],
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -135,58 +222,6 @@ ShallowWrapper {
         ],
         "type": "div",
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <img
-              alt="Revisit a jar of wisdoms"
-              className="wisdom-jar"
-              src="wisdom-jar.png"
-/>,
-            <p
-              className="btn-txt"
->
-              (2)
-                          Wisdom in Jar
-</p>,
-          ],
-          "className": "jar-o-wisdom",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Revisit a jar of wisdoms",
-              "className": "wisdom-jar",
-              "src": "wisdom-jar.png",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "(2)
-            Wisdom in Jar",
-              "className": "btn-txt",
-            },
-            "ref": null,
-            "rendered": "(2)
-            Wisdom in Jar",
-            "type": "p",
-          },
-        ],
-        "type": "div",
-      },
       false,
     ],
     "type": "div",
@@ -198,6 +233,25 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="btn-shelf"
+>
+            <div
+                        className="jar-o-wisdoms"
+            >
+                        <img
+                                    alt="Revisit a jar of wisdoms"
+                                    className="wisdom-jar"
+                                    src="wisdom-jar.png"
+                        />
+                        <p
+                                    className="btn-txt"
+                        >
+                                    (2)
+                                                  Wisdom in Jar
+                        </p>
+            </div>
+</div>,
           <div
             className="cookie-container"
 >
@@ -214,27 +268,95 @@ ShallowWrapper {
                         src="right-cookie.png"
             />
 </div>,
-          <div
-            className="jar-o-wisdom"
->
-            <img
-                        alt="Revisit a jar of wisdoms"
-                        className="wisdom-jar"
-                        src="wisdom-jar.png"
-            />
-            <p
-                        className="btn-txt"
-            >
-                        (2)
-                                    Wisdom in Jar
-            </p>
-</div>,
           false,
         ],
         "className": "Cookie",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="jar-o-wisdoms"
+>
+                <img
+                                alt="Revisit a jar of wisdoms"
+                                className="wisdom-jar"
+                                src="wisdom-jar.png"
+                />
+                <p
+                                className="btn-txt"
+                >
+                                (2)
+                                              Wisdom in Jar
+                </p>
+</div>,
+              false,
+            ],
+            "className": "btn-shelf",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Revisit a jar of wisdoms"
+                    className="wisdom-jar"
+                    src="wisdom-jar.png"
+/>,
+                  <p
+                    className="btn-txt"
+>
+                    (2)
+                                  Wisdom in Jar
+</p>,
+                ],
+                "className": "jar-o-wisdoms",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Revisit a jar of wisdoms",
+                    "className": "wisdom-jar",
+                    "src": "wisdom-jar.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "(2)
+              Wisdom in Jar",
+                    "className": "btn-txt",
+                  },
+                  "ref": null,
+                  "rendered": "(2)
+              Wisdom in Jar",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            false,
+          ],
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -285,58 +407,6 @@ ShallowWrapper {
               "ref": null,
               "rendered": null,
               "type": "img",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <img
-                alt="Revisit a jar of wisdoms"
-                className="wisdom-jar"
-                src="wisdom-jar.png"
-/>,
-              <p
-                className="btn-txt"
->
-                (2)
-                            Wisdom in Jar
-</p>,
-            ],
-            "className": "jar-o-wisdom",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Revisit a jar of wisdoms",
-                "className": "wisdom-jar",
-                "src": "wisdom-jar.png",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "(2)
-            Wisdom in Jar",
-                "className": "btn-txt",
-              },
-              "ref": null,
-              "rendered": "(2)
-            Wisdom in Jar",
-              "type": "p",
             },
           ],
           "type": "div",

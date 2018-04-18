@@ -1,36 +1,35 @@
-.Cookie {
-  position: absolute;
-  width: 50%;
-}
-
-.jar-o-wisdom {
-  width: 100%;
+.btn-shelf {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: relative;
+  z-index: 5;
 }
 
 .cookie-container {
-  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
 .left-cookie, .right-cookie {
-  position: absolute;
-  /*display: inline-block;*/
+  position: relative;
   cursor: pointer;
   transition: all .6s;
 }
 
 .left-cookie {
-  top: 414px;
-  /*left: 469px;*/
-  /*top: 250px;*/
-  left: 100px;
+  top: 55px;
+  left: 80px;
   width: 322px;
   z-index: 2;
   transform: rotate(-20deg);
 }
 
 .right-cookie {
-  top: 400px;
-  left: 240px;
+  top: 47px;
+  right: 99px;
   width: 280px;
   z-index: 1;
   -webkit-transform: rotate(-20deg);
@@ -39,30 +38,28 @@
 }
 
 .left-cookie-broken {
-  top: 320px;
-  left: -130px;
+  left: -125px;
   transform: rotate(-6deg);
   z-index: 2;
 }
 
 .right-cookie-broken {
-  top: 290px;
-  left: 410px;
+  left: 100px;
   transform: rotate(-16deg);
   z-index: 2;
 }
 
 .wisdom-wrapper {
-  position: absolute;
-  top: 380px;
-  width: 50%;
-  margin: auto 0;
+  position: relative;
+  z-index: 5;
+  bottom: 180px;
+  left: 8px;
 }
 
 .message {
-  position: absolute;
-  top: 36px;
-  left: 197px;
+  position: relative;
+  top: 60px;
+  left: 188px;
   width: 320px;
   color: #3A4B77;
   font-size: .8em;
@@ -70,19 +67,13 @@
   margin: 0;
 }
 
-.btn-flex {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly; 
-}
-
 .put-inna-jar,
 .eat-another-cookie {
-  /*display: inline-block;*/
-  position: relative;
-  top: -113px;
-  margin: 0 15Ypx;
+  display: inline-block;
+}
+
+.eat-another-cookie {
+  margin-left: 15px;
 }
 
 .to-jar,
@@ -117,25 +108,34 @@
   margin: 0;
 }
 
-.columns {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
+@media screen and (max-width: 601px) {
+  .left-cookie {
+    width: 300px;
+  }
 
-.left-column,
-.right-column {
-  width: 50%;
-}
-
-@media screen and (max-width: 1111px) {
-  .Cookie {
-    width: 100%;
+  .right-cookie {
+    width: 260px;
   }
 }
 
-@media screen and (max-width: 599px) {
-  .btn-flex {
-    justify-content: space-around;
+@media screen and (max-width: 559px) {
+  .left-cookie {
+    width: 260px;
+  }
+
+  .right-cookie {
+    width: 220px;
+  }
+
+  @media screen and (max-width: 479px) {
+    .left-cookie {
+      width: 200px;
+      left: 60px;
+    }
+
+    .right-cookie {
+      width: 180px;
+      right: 60px;
+    }
   }
 }

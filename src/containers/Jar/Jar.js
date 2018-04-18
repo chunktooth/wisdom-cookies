@@ -6,6 +6,7 @@ import emptyJar from '../../images/empty-jar.png';
 import './Jar.css';
 
 
+
 export class Jar extends Component {
 
   wisdomCollection = () => ( 
@@ -18,11 +19,11 @@ export class Jar extends Component {
  
   render() {
     return (
-      <div className='Jar'>     
+      <div className='Jar'>
+        <img src={emptyJar} 
+          className='empty-jar'
+          alt="A jar of many wisdoms" />        
         <div className='wisdom-collection'>
-        <img src={emptyJar}
-          className='empty-jar' 
-          alt="A jar of many wisdoms" />
           {this.wisdomCollection()}
         </div>
       </div>

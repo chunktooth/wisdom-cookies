@@ -32,30 +32,32 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
-          alt="A jar of wisdom collection"
+          alt="A jar of many wisdoms"
           className="empty-jar"
           src="empty-jar.png"
 />,
-        Array [
+        <div
+          className="wisdom-collection"
+>
           <Connect(WisdomInJar)
-            wisdom={
-                        Object {
-                                    "id": "5280",
-                                    "message": "Mankind is unkind, man",
-                                  }
-            }
-/>,
+                    wisdom={
+                              Object {
+                                        "id": "5280",
+                                        "message": "Mankind is unkind, man",
+                                      }
+                    }
+          />
           <Connect(WisdomInJar)
-            wisdom={
-                        Object {
-                                    "id": "1234",
-                                    "message": "Godluck and Goodspeed!",
-                                  }
-            }
-/>,
-        ],
+                    wisdom={
+                              Object {
+                                        "id": "1234",
+                                        "message": "Godluck and Goodspeed!",
+                                      }
+                    }
+          />
+</div>,
       ],
-      "className": "wisdom-collection",
+      "className": "Jar",
     },
     "ref": null,
     "rendered": Array [
@@ -64,7 +66,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "A jar of wisdom collection",
+          "alt": "A jar of many wisdoms",
           "className": "empty-jar",
           "src": "empty-jar.png",
         },
@@ -74,48 +76,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": "5280",
-        "nodeType": "class",
+        "key": undefined,
+        "nodeType": "host",
         "props": Object {
-          "wisdom": Object {
-            "id": "5280",
-            "message": "Mankind is unkind, man",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": "1234",
-        "nodeType": "class",
-        "props": Object {
-          "wisdom": Object {
-            "id": "1234",
-            "message": "Godluck and Goodspeed!",
-          },
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <img
-            alt="A jar of wisdom collection"
-            className="empty-jar"
-            src="empty-jar.png"
-/>,
-          Array [
+          "children": Array [
             <Connect(WisdomInJar)
               wisdom={
                             Object {
@@ -133,8 +97,78 @@ ShallowWrapper {
               }
 />,
           ],
+          "className": "wisdom-collection",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "5280",
+            "nodeType": "class",
+            "props": Object {
+              "wisdom": Object {
+                "id": "5280",
+                "message": "Mankind is unkind, man",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1234",
+            "nodeType": "class",
+            "props": Object {
+              "wisdom": Object {
+                "id": "1234",
+                "message": "Godluck and Goodspeed!",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
-        "className": "wisdom-collection",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="A jar of many wisdoms"
+            className="empty-jar"
+            src="empty-jar.png"
+/>,
+          <div
+            className="wisdom-collection"
+>
+            <Connect(WisdomInJar)
+                        wisdom={
+                                    Object {
+                                                "id": "5280",
+                                                "message": "Mankind is unkind, man",
+                                              }
+                        }
+            />
+            <Connect(WisdomInJar)
+                        wisdom={
+                                    Object {
+                                                "id": "1234",
+                                                "message": "Godluck and Goodspeed!",
+                                              }
+                        }
+            />
+</div>,
+        ],
+        "className": "Jar",
       },
       "ref": null,
       "rendered": Array [
@@ -143,7 +177,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "A jar of wisdom collection",
+            "alt": "A jar of many wisdoms",
             "className": "empty-jar",
             "src": "empty-jar.png",
           },
@@ -153,31 +187,61 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": "5280",
-          "nodeType": "class",
+          "key": undefined,
+          "nodeType": "host",
           "props": Object {
-            "wisdom": Object {
-              "id": "5280",
-              "message": "Mankind is unkind, man",
-            },
+            "children": Array [
+              <Connect(WisdomInJar)
+                wisdom={
+                                Object {
+                                                "id": "5280",
+                                                "message": "Mankind is unkind, man",
+                                              }
+                }
+/>,
+              <Connect(WisdomInJar)
+                wisdom={
+                                Object {
+                                                "id": "1234",
+                                                "message": "Godluck and Goodspeed!",
+                                              }
+                }
+/>,
+            ],
+            "className": "wisdom-collection",
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": "1234",
-          "nodeType": "class",
-          "props": Object {
-            "wisdom": Object {
-              "id": "1234",
-              "message": "Godluck and Goodspeed!",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "5280",
+              "nodeType": "class",
+              "props": Object {
+                "wisdom": Object {
+                  "id": "5280",
+                  "message": "Mankind is unkind, man",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+            Object {
+              "instance": null,
+              "key": "1234",
+              "nodeType": "class",
+              "props": Object {
+                "wisdom": Object {
+                  "id": "1234",
+                  "message": "Godluck and Goodspeed!",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

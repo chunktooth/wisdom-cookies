@@ -1,31 +1,33 @@
 .WisdomInJar {
-  position: relative;
   top: 20px;
   right: 34px;
-  width: 330px;
+  width: 300px;
   z-index: 10;
-  margin: auto;
+  margin: 10px auto;
 }
 
 .wisdom-message, 
 .delete-btn {
   position: relative;
-  display: inline-block;
   cursor: pointer;
   color: #FFFFFF;
   font-size: .9em;
   z-index: 100;
 }
 
-.wisdom-message:hover + .delete-btn:hover {
-  display: inline-block
+.delete-btn {
+  opacity: 0;
+}
+
+.WisdomInJar:hover .delete-btn,
+.WisdomInJar:hover .wisdom-message {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 .delete-btn {
   background: transparent;
   border: none;
-  /*display: none;*/
   font-weight: bold;
   z-index: 10; 
 }
-

@@ -13,12 +13,13 @@ export class WisdomInJar extends Component {
   render() {
     return (
       <div className='WisdomInJar'>
+        <button 
+          onClick={this.removeFromJar}
+          className='delete-btn'>[ X ]
+        </button>
         <p className='wisdom-message'>
           {this.props.wisdom.message}
         </p>
-        <button 
-          onClick={this.removeFromJar}
-          className='delete-btn'>[ X ]</button>
       </div>
     );
   } 
@@ -40,5 +41,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(WisdomInJar);
 
 WisdomInJar.propTypes = {
   trashFromJar: PropTypes.func,
-  wisdom: PropTypes.wisdom
+  wisdom: PropTypes.object
 };

@@ -19,16 +19,10 @@ ShallowWrapper {
     }
     trashFromJar={[Function]}
     wisdom={
-        Array [
-            Object {
-              "id": "5280",
-              "message": "Mankind is unkind, man..",
-            },
-            Object {
-              "id": "1234",
-              "message": "Godluck and Goodspeeeed!",
-            },
-          ]
+        Object {
+            "id": "1234",
+            "message": "In Crust We Trust",
+          }
     }
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -44,32 +38,22 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <p
-          className="wisdom-message"
-/>,
         <button
           className="delete-btn"
           onClick={[Function]}
 >
           [ X ]
 </button>,
+        <p
+          className="wisdom-message"
+>
+          In Crust We Trust
+</p>,
       ],
-      "className": "wisdom-inna-jar",
+      "className": "WisdomInJar",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": undefined,
-          "className": "wisdom-message",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "p",
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -83,6 +67,18 @@ ShallowWrapper {
         "rendered": "[ X ]",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "In Crust We Trust",
+          "className": "wisdom-message",
+        },
+        "ref": null,
+        "rendered": "In Crust We Trust",
+        "type": "p",
+      },
     ],
     "type": "div",
   },
@@ -93,32 +89,22 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <p
-            className="wisdom-message"
-/>,
           <button
             className="delete-btn"
             onClick={[Function]}
 >
             [ X ]
 </button>,
+          <p
+            className="wisdom-message"
+>
+            In Crust We Trust
+</p>,
         ],
-        "className": "wisdom-inna-jar",
+        "className": "WisdomInJar",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": undefined,
-            "className": "wisdom-message",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "p",
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -131,6 +117,18 @@ ShallowWrapper {
           "ref": null,
           "rendered": "[ X ]",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "In Crust We Trust",
+            "className": "wisdom-message",
+          },
+          "ref": null,
+          "rendered": "In Crust We Trust",
+          "type": "p",
         },
       ],
       "type": "div",
