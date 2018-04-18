@@ -255,6 +255,13 @@
   }
 }
 
+@media screen and (max-width: 353px) {
+  .message {
+    top: 30%;
+    left: 16%;
+  }
+}
+
 @media screen and (max-width: 320px) {
  .message {
     width: 238px;
