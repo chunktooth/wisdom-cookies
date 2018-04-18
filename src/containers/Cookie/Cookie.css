@@ -77,15 +77,13 @@
 }
 
 .to-jar,
-.eat-cookie,
-.wisdom-jar {
+.eat-cookie {
   cursor: pointer;
   box-shadow: 0px 0px 10px 2px #FFF;
 }
 
 .to-jar:hover,
-.eat-cookie:hover,
-.wisdom-jar:hover {
+.eat-cookie:hover {
   box-shadow: 0px 0px 20px 2px #FFF;
 }
 

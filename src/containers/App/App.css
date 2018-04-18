@@ -77,6 +77,7 @@
   .left-column,
   .right-column {
     width: 100%;
+    margin: 10px auto;
   }
 
   .left-column {
@@ -85,6 +86,11 @@
 
   .right-column {
     margin: 0 auto;
+  }
+
+  .dragon {
+    top: 64px;
+    left: 34px;
   }
 }
 

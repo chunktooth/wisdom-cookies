@@ -1,3 +1,7 @@
+.Jar {
+  height: 600px;
+}
+
 .empty-jar {
   position: relative;
   width: 400px;
@@ -15,6 +19,12 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 1111px) {
+  .Jar {
+    height: 650px;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .empty-jar {
     width: 320px;
@@ -26,9 +36,8 @@
   }
 }
 
-@media screen and (max-width: 348px) {
-  .dragon {
-    width: 320px;
-    height: 600px;
+@media screen and (max-width: 395px) {
+  .Jar {
+    height: 550px;
   }
 }
