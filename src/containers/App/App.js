@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Route, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Cookie from '../Cookie/Cookie';
 import Jar from '../Jar/Jar';
+import Moons from '../Moons/Moons';
 import { getWisdoms } from '../../apiCalls/getWisdoms';
 import { getMoons } from '../../apiCalls/getMoons';
 import { loadWisdoms, loadMoons } from '../../actions';
@@ -34,7 +36,8 @@ export class App extends Component {
           <Cookie />
         </div>
         <div className='right-column'>
-          <Jar />
+          <Route exact path='/jar' component={ Jar } />
+          <Route exact path='/moons' component={ Moons } />
         </div>
       </div>
     );
@@ -56,7 +59,7 @@ export const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
 
 App.propTypes = {
   loadWisdoms: PropTypes.func,
