@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import emptyJar from '../../images/empty-jar.png';
 import './Jar.css';
 
-
-
 export class Jar extends Component {
 
   wisdomCollection = () => ( 

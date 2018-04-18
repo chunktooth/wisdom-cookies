@@ -70,16 +70,18 @@ export class Cookie extends Component {
 
     return (
       <div className='Cookie'> 
-        <div className='btn-shelf'>  
-          <div className='jar-o-wisdoms'>
-            <img src={wisdomJar}
-              className='wisdom-jar' 
-              alt="Revisit a jar of wisdoms" />
-            <p className='btn-txt'>
-              {`(${this.props.jar.length})
-              Wisdom in Jar`}
-            </p>
-          </div>
+        <div className='btn-shelf'> 
+          <NavLink to='/jar' id='jar'> 
+            <div className='jar-o-wisdoms'>
+              <img src={wisdomJar}
+                className='wisdom-jar' 
+                alt="Revisit a jar of wisdoms" />
+              <p className='btn-txt'>
+                {`(${this.props.jar.length})
+                Wisdom in Jar`}
+              </p>
+            </div>
+          </NavLink>
 
           <NavLink to='/moons' id='moons'>
             <div className='see-the-moon'>

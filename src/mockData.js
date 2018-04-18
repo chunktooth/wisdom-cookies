@@ -21,16 +21,53 @@ export const mockJar = [
   }
 ];
 
-export const mockMoonphases = [{
-  "Error":0,
-  "TargetDate":"1523807073770",
-  "Moon":["Thunder Moon"],
-  "Phase":"Waxing Crescent",
-  "Distance":363468.16,
-  "DistanceToSun":151945827.15136
-}];
+export const mockMoonphases = { response: [
+  { 
+    timestamp: 1524433610, 
+    dateTimeISO: "2018-04-22T21:46:50+00:00", 
+    code: 1, 
+    name: "first quarter"
+  },
+  {
+    timestamp: 1525049954, 
+    dateTimeISO: "2018-04-30T00:59:14+00:00", 
+    code: 2, 
+    name: "full moon"
+  }]
+};
+
+export const mockMoonphasesArray = [{ response: [
+  { 
+    timestamp: 1524433610, 
+    dateTimeISO: "2018-04-22T21:46:50+00:00", 
+    code: 1, 
+    name: "first quarter"
+  },
+  {
+    timestamp: 1525049954, 
+    dateTimeISO: "2018-04-30T00:59:14+00:00", 
+    code: 2, 
+    name: "full moon"
+  }]
+}]; 
+
+export const mockMoonphase =  {
+    date: "2018-04-22", 
+    name: "first quarter"
+};
 
 export const mockWisdom = {
   'message': 'In Crust We Trust',
   'id': '1234'
 };
+
+export const mockCleanedMoons = [
+  {
+    date: "2018-04-22", 
+    name: "first quarter"
+  },
+  { 
+    date: "2018-04-30", 
+    name: "full moon"
+  }
+];

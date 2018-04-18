@@ -1,5 +1,6 @@
-import { getMoons } from './getMoons';
-import { mockMoonphases } from '../mockData';
+import { getMoons, cleanMoons } from './getMoons';
+import { mockMoonphases, mockCleanedMoons } from '../mockData';
+
 
 describe('getMoons', () => {
 
@@ -10,8 +11,8 @@ describe('getMoons', () => {
     }));
 
     const received = await getMoons();
-
-    expect(received).toEqual(mockMoonphases);
+    const expected = cleanMoons(mockMoonphases);
+    expect(received).toEqual(expected);
   });
 
   it('should throw an error in case of bad response', async () => {
@@ -25,3 +26,12 @@ describe('getMoons', () => {
   });
 
 });
+
+describe('cleanMoons', () => {
+  
+  it('should return cleaned moon data', () => {
+    const received = cleanMoons(mockMoonphases);
+    expect(received).toEqual(mockCleanedMoons);
+  });
+
+}); 

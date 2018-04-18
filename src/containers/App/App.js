@@ -18,9 +18,8 @@ export class App extends Component {
     this.props.loadWisdoms(wisdoms);
     const moonphases = await getMoons();
     this.props.loadMoons(moonphases);
-    console.log(moonphases);
   }
-3
+
   render() {
     return (
       <div className='App'>  
