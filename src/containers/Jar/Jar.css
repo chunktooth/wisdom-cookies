@@ -1,27 +1,43 @@
-.wisdom-collection {
-  position: absolute;
-  top: 100px;
-  right: 120px;
-  width: 330px;
+.Jar {
   height: 600px;
-  z-index: 0;
 }
 
 .empty-jar {
-  position: absolute;
-  right: 0px;
+  position: relative;
   width: 400px;
   z-index: 0;
 }
 
+.wisdom-collection {
+  position: relative;
+  top: -532px;
+  margin: 0 auto;
+  padding: 10px;
+  width: 330px;
+  height: 470px;
+  overflow: scroll;
+  z-index: 2;
+}
+
 @media screen and (max-width: 1111px) {
-  .wisdom-collection {
-    top: 600px;
-    right: 0;
-    width: 100%;
+  .Jar {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .empty-jar {
+    width: 320px;
   }
 
-  .empty-jar {
-    position: relative;
+  .wisdom-collection {
+    top: -400px;
+    height: 370px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .Jar {
+    height: 550px;
   }
 }

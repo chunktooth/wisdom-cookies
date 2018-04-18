@@ -11,20 +11,19 @@ export class WisdomInJar extends Component {
   }
 
   render() {
-     console.log(this.props)
-
     return (
-      <div className='wisdom-inna-jar'>
+      <div className='WisdomInJar'>
+        <button 
+          onClick={this.removeFromJar}
+          className='delete-btn'>[ X ]
+        </button>
         <p className='wisdom-message'>
           {this.props.wisdom.message}
         </p>
-        <button 
-          onClick={this.removeFromJar}
-          className='delete-btn'>[ X ]</button>
       </div>
     );
   } 
-};
+}
 
 export const mapStateToProps = (state) => {
   return {
@@ -42,4 +41,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(WisdomInJar);
 
 WisdomInJar.propTypes = {
   trashFromJar: PropTypes.func,
+  wisdom: PropTypes.object
 };

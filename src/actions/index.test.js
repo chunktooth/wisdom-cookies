@@ -51,15 +51,15 @@ describe('actions', () => {
 
   });
 
-   describe('load moons', () => {
+  describe('load moons', () => {
 
     it('should return a type of LOAD_MOONS with payload of moonphases', () => {
       const moonphases = [{"Error":0,
-      "TargetDate":"1523807073770",
-      "Moon":["Thunder Moon"],
-      "Phase":"Waxing Crescent",
-      "Distance":363468.16,
-      "DistanceToSun":151945827.15136}];
+        "TargetDate":"1523807073770",
+        "Moon":["Thunder Moon"],
+        "Phase":"Waxing Crescent",
+        "Distance":363468.16,
+        "DistanceToSun":151945827.15136}];
       const expected = {
         type: 'LOAD_MOONS',
         moonphases
@@ -70,4 +70,4 @@ describe('actions', () => {
 
   });
 
-})
+});

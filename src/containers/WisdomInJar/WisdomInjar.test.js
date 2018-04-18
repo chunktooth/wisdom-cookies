@@ -16,7 +16,7 @@ describe('WisdomInJar', () => {
       trashFromJar={mockTrashFromJar} />);
   });
 
-  it.skip('should match the snapshot', () => {
+  it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -25,8 +25,6 @@ describe('WisdomInJar', () => {
       jar={mockJar}
       wisdom={mockWisdom}
       trashFromJar={mockTrashFromJar} />);
-
-    console.log(mockWisdom.message)
     
     wrapper.instance().removeFromJar();
     expect(mockTrashFromJar).toHaveBeenCalledWith(mockWisdom.id);

@@ -30,13 +30,7 @@ export const mockMoonphases = [{
   "DistanceToSun":151945827.15136
 }];
 
-export const mockWisdom = [
-  {
-    'message': 'Mankind is unkind, man..',
-    'id': '5280'
-  },
-  {
-    'message': 'Godluck and Goodspeeeed!',
-    'id': '1234'
-  }
-];
+export const mockWisdom = {
+  'message': 'In Crust We Trust',
+  'id': '1234'
+};

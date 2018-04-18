@@ -6,31 +6,34 @@ import emptyJar from '../../images/empty-jar.png';
 import './Jar.css';
 
 
+
 export class Jar extends Component {
 
-  wisdomCollection = () => { 
-    return this.props.jar.map(wisdom => {
-      return <WisdomInJar 
+  wisdomCollection = () => ( 
+    this.props.jar.map(wisdom => (
+      <WisdomInJar 
         wisdom={wisdom} 
         key={wisdom.id} />
-    });
-  }
+    ))
+  )
  
- render() {
-  return (
-    <div className='wisdom-collection'>
-      <img src={emptyJar}
-          className='empty-jar' 
-          alt="A jar of wisdom collection" />
-        {this.wisdomCollection()}
-    </div>
-  );      
- }
+  render() {
+    return (
+      <div className='Jar'>
+        <img src={emptyJar} 
+          className='empty-jar'
+          alt="A jar of many wisdoms" />        
+        <div className='wisdom-collection'>
+          {this.wisdomCollection()}
+        </div>
+      </div>
+    );      
+  }
 }
 
 export const mapStateToProps = (state) => {
-  return {
-    jar: state.jar
+  return { 
+    jar: state.jar 
   };
 };
 

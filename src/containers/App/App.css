@@ -4,13 +4,12 @@
   flex-direction: row;
   text-align: center;
   background-image: url('../../images/red-bg.jpg');
+  background-color: rgba(0, 0, 0, .3);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
 }
 
 .App-header {
-  position: relative;
   width: 100%;
   z-index: 100;
 }
@@ -31,8 +30,8 @@
   position: absolute;
   top: 10px;
   left: 0;
-  width: 328px;
-  height: 640px;
+  width: 400px;
+  height: 760px;
   z-index: 0;
 }
 
@@ -42,6 +41,7 @@
 }
 
 .title {
+  position: relative;
   font-family: 'Press Start 2P', cursive;
   font-size: 2.3em;
   z-index: 3;
@@ -49,26 +49,48 @@
 
 .under-title {
   font-size: 1em;
-}
-
-.nav {
-  text-decoration: none;
+  position: relative;
+  z-index: 3;
 }
 
 .left-column,
 .right-column {
   width: 50%;
+  margin: 130px auto;
+}
+
+@media screen and (max-width: 1203px) {
+  .left-column {
+    width: 60%;
+  }
+
+  .right-column {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 1111px) {
-  .App {
+  .App {  
     flex-direction: column;
   }
   
   .left-column,
   .right-column {
     width: 100%;
-    margin: auto;
+    margin: 10px auto;
+  }
+
+  .left-column {
+    margin-bottom: 0;
+  }
+
+  .right-column {
+    margin: 0 auto;
+  }
+
+  .dragon {
+    top: 64px;
+    left: 34px;
   }
 }
 
@@ -79,7 +101,18 @@
   .under-title {
     font-size: .8em;
   }
-  .nav-bar {
-    top: 150px;
+}
+
+@media screen and (max-width: 400px) {
+  .dragon {
+    width: 320px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  .dragon {
+    width: 320px;
+    height: 600px;
   }
 }

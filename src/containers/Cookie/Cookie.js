@@ -16,8 +16,7 @@ export class Cookie extends Component {
     this.state = {
       revealWisdom: false,
       brokenCookie: false, 
-      wisdom: {},
-      jar: []
+      wisdom: {}
     };
   }
 
@@ -29,21 +28,22 @@ export class Cookie extends Component {
       brokenCookie: !this.state.brokenCookie
     });
     this.state.revealWisdom === true ? 
-      this.hideWisdom(wisdoms) : 
+      this.hideWisdom() : 
       this.showWisdom(wisdoms);
   }; 
 
   showWisdom = async (wisdoms) => {
     const randomKey = Math.floor(Math.random() * wisdoms.length);
     const wisdom = wisdoms[randomKey];
-    this.setState({ wisdom });
+    await this.setState({ wisdom });
   };
 
   hideWisdom = () => {
     this.setState({ 
       wisdom: {},
       brokenCookie: false,
-      revealWisdom: false });
+      revealWisdom: false 
+    });
   };
 
   putWisdomInJar = () => {
@@ -67,21 +67,9 @@ export class Cookie extends Component {
       true ? 'right-cookie-broken' : '';
 
     return (
-      <div className='Cookie'>      
-        { !this.state.broken && 
-          <div className='cookie-container'>
-            <img src={leftCookie}
-              className={`left-cookie ${leftCookieState}`}
-              alt="left piece of cookie"
-              onClick={this.eatCookie} />  
-            <img src={rightCookie}
-              className={`right-cookie ${rightCookieState}`}
-              alt="right piece of cookie"
-              onClick={this.eatCookie} /> 
-          </div>
-        }
-
-          <div className='jar-o-wisdom'>
+      <div className='Cookie'> 
+        <div className='btn-shelf'>  
+          <div className='jar-o-wisdoms'>
             <img src={wisdomJar}
               className='wisdom-jar' 
               alt="Revisit a jar of wisdoms" />
@@ -91,36 +79,49 @@ export class Cookie extends Component {
             </p>
           </div>
 
-        { this.state.revealWisdom &&
-          <div className='Wisdom'>
-            <div className='wisdom-wrapper'>
-              <p className='message'>
-                  {this.state.wisdom.message}
-              </p>
-              <img src={wisdom}
-                className='wisdom-paper'
-                alt="Wisdom on a paper"
-                onClick={this.eatCookie} />
-            </div> 
-          
-          <div className='btn-flex'>
-            <div className='put-inna-jar'>
-              <img src={toJar}
-                className='to-jar'
-                alt="A jar to throw in wisdoms"
-                onClick={this.putWisdomInJar} />
-              <p className='btn-txt'>Keep Wisdom</p>
-            </div>
+          { this.state.revealWisdom &&
+            <div className='jar-n-cookies'>
+              <div className='put-inna-jar'>
+                <img src={toJar}
+                  className='to-jar'
+                  alt="A jar to throw in wisdoms"
+                  onClick={this.putWisdomInJar} />
+                <p className='btn-txt'>Keep Wisdom</p>
+              </div>
 
-            <div className='eat-another-cookie'>
-              <img src={eatCookie}
-                className='eat-cookie'
-                alt="Eat another cookie"
-                onClick={this.eatCookie} />
-              <p className='btn-txt'>Eat Another!</p>
+              <div className='eat-another-cookie'>
+                <img src={eatCookie}
+                  className='eat-cookie'
+                  alt="Eat another cookie"
+                  onClick={this.eatCookie} />
+                <p className='btn-txt'>Eat Another!</p>
+              </div>
             </div>
+          } 
+        </div>
+
+        { !this.state.broken && 
+          <div className='cookie-container'>
+            <img src={leftCookie}
+              className={`left-cookie ${leftCookieState}`}
+              alt="left piece of cookie"
+              onClick={this.eatCookie} />  
+            <img src={rightCookie}
+              className={`right-cookie ${rightCookieState}`}
+              alt="right piece of cookie"
+              onClick={this.eatCookie} />
           </div>
-          </div>      
+        }
+
+        { this.state.revealWisdom &&
+          <div className='wisdom-wrapper'>
+            <img src={wisdom}
+              className='wisdom-paper'
+              alt="Wisdom on a paper" />
+            <p className='message'>
+              {this.state.wisdom.message}
+            </p>
+          </div> 
         }
       </div> 
     );
