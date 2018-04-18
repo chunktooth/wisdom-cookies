@@ -68,7 +68,8 @@
 }
 
 .put-inna-jar,
-.eat-another-cookie {
+.eat-another-cookie,
+.moon-cake {
   display: inline-block;
 }
 
@@ -77,97 +78,99 @@
 }
 
 .to-jar,
-.eat-cookie {
+.eat-cookie,
+.moon-cake {
   cursor: pointer;
   box-shadow: 0px 0px 10px 2px #FFF;
 }
 
 .to-jar:hover,
-.eat-cookie:hover {
+.eat-cookie:hover,
+.moon-cake:hover {
   box-shadow: 0px 0px 20px 2px #FFF;
 }
 
 .to-jar {
   width: 80px;
-  padding-bottom: 4.5px;
+  padding: 3px 5px;
 }
 
 .eat-cookie {
-  width: 80px;
-  padding: 10px 0;
+  width: 81px;
+  padding: 10px 5px;
 }
 
 .wisdom-jar {
-  width: 70px;
-  padding: 7px;
+  width: 80px;
+  padding: 2px;
+}
+
+.moon-cake {
+  width: 85px;
+  padding: 3px;
 }
 
 .btn-txt {
   margin: 0;
 }
 
-@media screen and (max-width: 1111px) {
+
+  @media screen and (max-width: 1228px) {
   .message {
-    left: 36%;
-  }
-}
-
-@media screen and (max-width: 888px) {
-  .message {
-    left: 33%;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .message {
-    left: 30%;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .message {
-    left: 27%;
-  }
-}
-
-@media screen and (max-width: 601px) {
-  .left-cookie {
-    width: 300px;
+      left: 25%;
+    }
   }
 
-  .right-cookie {
-    width: 260px;
-  }
-}
-
-@media screen and (max-width: 590px) {
-  .message {
-    left: 23%;
-  }
-}
-
-
-@media screen and (max-width: 588px) {
-  .wisdom-wrapper {
-    bottom: 211px;
-  }
-}
-
-@media screen and (max-width: 559px) {
-  .left-cookie {
-    width: 260px;
+  @media screen and (max-width: 1111px) {
+    .message {
+      left: 36%;
+    }
   }
 
-  .right-cookie {
-    width: 220px;
+  @media screen and (max-width: 888px) {
+    .message {
+      left: 32%;
+    }
   }
-}
 
-@media screen and (max-width: 588px) {
-  .wisdom-wrapper {
-    bottom: 211px;
+  @media screen and (max-width: 769px) {
+    .message {
+      left: 30%;
+    }
   }
-}
+
+  @media screen and (max-width: 601px) {
+    .left-cookie {
+      width: 300px;
+    }
+
+    .right-cookie {
+      width: 260px;
+    }
+  }
+
+  @media screen and (max-width: 590px) {
+    .message {
+      left: 23%;
+    }
+  }
+
+
+  @media screen and (max-width: 588px) {
+    .wisdom-wrapper {
+      bottom: 211px;
+    }
+  }
+
+  @media screen and (max-width: 559px) {
+    .left-cookie {
+      width: 260px;
+    }
+
+    .right-cookie {
+      width: 220px;
+    }
+  }
 
   @media screen and (max-width: 479px) {
     .left-cookie {
@@ -210,7 +213,7 @@
     }
   }
 
-    @media screen and (max-width: 376px) {
+  @media screen and (max-width: 376px) {
     .left-cookie {
       width: 160px;
       left: 37px;
@@ -250,7 +253,7 @@
    .message {
       width: 238px;
       top: 22%;
-      left: 13%;
+      left: 14%;
     }
 
     .left-cookie-broken {

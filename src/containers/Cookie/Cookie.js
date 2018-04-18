@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { keepInJar } from '../../actions';
 import leftCookie from '../../images/left-cookie.png';
@@ -7,6 +8,7 @@ import wisdom from '../../images/wisdom-paper.jpg';
 import toJar from '../../images/put-inna-jar.png';
 import eatCookie from '../../images/eat-cookie.png';
 import wisdomJar from '../../images/wisdom-jar.png';
+import moonCake from '../../images/mooncake.png';
 import PropTypes from 'prop-types';
 import './Cookie.css';
 
@@ -78,6 +80,17 @@ export class Cookie extends Component {
               Wisdom in Jar`}
             </p>
           </div>
+
+          <NavLink to='/moons' id='moons'>
+            <div className='see-the-moon'>
+              <img src={moonCake}
+                className='moon-cake' 
+                alt="A half eaten mooncake" />
+              <p className='btn-txt'>
+                See Moonphases
+              </p>
+            </div>
+          </NavLink>
 
           { this.state.revealWisdom &&
             <div className='jar-n-cookies'>
