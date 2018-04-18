@@ -52,8 +52,8 @@ export const mockMoonphasesArray = [{ response: [
 }]; 
 
 export const mockMoonphase =  {
-    date: "2018-04-22", 
-    name: "first quarter"
+  date: "2018-04-22", 
+  name: "first quarter"
 };
 
 export const mockWisdom = {
