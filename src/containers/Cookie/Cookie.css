@@ -57,9 +57,9 @@
 }
 
 .message {
-  position: relative;
-  top: 60px;
-  left: 188px;
+  position: absolute;
+  top: 35%;
+  left: 28%;
   width: 320px;
   color: #3A4B77;
   font-size: .8em;
@@ -108,6 +108,30 @@
   margin: 0;
 }
 
+@media screen and (max-width: 1111px) {
+  .message {
+    left: 36%;
+  }
+}
+
+@media screen and (max-width: 888px) {
+  .message {
+    left: 33%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .message {
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .message {
+    left: 27%;
+  }
+}
+
 @media screen and (max-width: 601px) {
   .left-cookie {
     width: 300px;
@@ -115,6 +139,19 @@
 
   .right-cookie {
     width: 260px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .message {
+    left: 23%;
+  }
+}
+
+
+@media screen and (max-width: 588px) {
+  .wisdom-wrapper {
+    bottom: 211px;
   }
 }
 
@@ -126,6 +163,13 @@
   .right-cookie {
     width: 220px;
   }
+}
+
+@media screen and (max-width: 588px) {
+  .wisdom-wrapper {
+    bottom: 211px;
+  }
+}
 
   @media screen and (max-width: 479px) {
     .left-cookie {
@@ -133,9 +177,89 @@
       left: 60px;
     }
 
+    .left-cookie-broken {
+      left: -126px;
+    }
+
     .right-cookie {
       width: 180px;
       right: 60px;
     }
+
+    .right-cookie-broken {
+      left: 134px;
+    }
+
+    .wisdom-wrapper {
+      bottom: 211px;
+    }
+
+    .message {
+      left: 17%;
+    }
   }
-}
+
+   @media screen and (max-width: 400px) {
+    .message {
+      left: 12%;
+    }
+  }
+
+
+  @media screen and (max-width: 382px) {
+    .wisdom-wrapper {
+      bottom: 233px;
+    }
+  }
+
+    @media screen and (max-width: 376px) {
+    .left-cookie {
+      width: 160px;
+      left: 37px;
+    }
+
+    .right-cookie {
+      width: 150px;
+    }
+
+     .left-cookie-broken {
+      left: -130px;
+    } 
+  }
+
+  @media screen and (max-width: 364px) {
+    .wisdom-paper {
+      width: 248px;
+      top: ;
+    }
+
+    .message {
+      width: 238px;
+      top: 13%;
+      left: 18%;
+    }
+
+    .left-cookie-broken {
+      left: -90px;
+    }
+
+    .right-cookie-broken {
+      left: 91px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+   .message {
+      width: 238px;
+      top: 22%;
+      left: 13%;
+    }
+
+    .left-cookie-broken {
+      top: 36px;
+    }
+
+    .right-cookie-broken {
+      top: 32px;
+    }
+  }

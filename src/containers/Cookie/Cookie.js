@@ -115,13 +115,12 @@ export class Cookie extends Component {
 
         { this.state.revealWisdom &&
           <div className='wisdom-wrapper'>
+            <img src={wisdom}
+              className='wisdom-paper'
+              alt="Wisdom on a paper" />
             <p className='message'>
               {this.state.wisdom.message}
             </p>
-            <img src={wisdom}
-              className='wisdom-paper'
-              alt="Wisdom on a paper"
-              onClick={this.eatCookie} />
           </div> 
         }
       </div> 

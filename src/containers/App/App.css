@@ -78,6 +78,14 @@
   .right-column {
     width: 100%;
   }
+
+  .left-column {
+    margin-bottom: 0;
+  }
+
+  .right-column {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 555px) {
@@ -86,5 +94,19 @@
   }
   .under-title {
     font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .dragon {
+    width: 320px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  .dragon {
+    width: 320px;
+    height: 600px;
   }
 }
