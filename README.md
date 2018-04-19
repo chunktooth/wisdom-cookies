@@ -11,7 +11,7 @@ Built with React Redux, fetched Fortune Cookies API from http://fortunecookieapi
 ![WC](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/wisdom-cookie-open.png)
 
 ### Extension (See moonphases)
-![MC](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/extension.png)
+![MC](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/moonphase-extension.png)
 
 ### Wireframes
 ![B4](https://github.com/chunktooth/wisdom-cookies/blob/master/src/images/wisdom-cookie-wireframe.png)
