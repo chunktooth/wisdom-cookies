@@ -1,5 +1,5 @@
 ## Wisdom Cookies
-### By chunktooth (Chantakahn Om Saetehn)
+### By [Om Saetehn](https://github.com/chunktooth)
 
 #### Choose wisdoms to guide your fortune. Unlimited cookies everyday just one click away. Users get the satisfaction of breaking open the cookie to reveal wisdom, then have an option save it in a jar of scrollable wisdoms, or trash it. There's another Mooncake feature that lets user see the moonphases within the next 4 quarters based on the current unix time.
 
