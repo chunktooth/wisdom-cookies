@@ -64,10 +64,12 @@ export const mockWisdom = {
 export const mockCleanedMoons = [
   {
     date: "2018-04-22", 
-    name: "first quarter"
+    name: "First quarter",
+    code: 1
   },
   { 
     date: "2018-04-30", 
-    name: "full moon"
+    name: "Full moon",
+    code: 2
   }
 ];

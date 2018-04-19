@@ -1,3 +1,11 @@
+.show-moons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
 .overhead {
   position: relative;
   font-family: 'Press Start 2P', cursive;
@@ -7,11 +15,6 @@
   margin: 30px;
 }
 
-.show-moons {
-  width: 100%;
-  height: 300px;
-}
-
 .Moons .wisdom-jar {
   width: 30px;
   padding: 5px;
@@ -19,8 +22,4 @@
 
 .nav {
   text-decoration: none;
-}
-
-.jar-o-wisdom {
-  margin-top: 10px;
 }

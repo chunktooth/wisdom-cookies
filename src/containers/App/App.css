@@ -101,6 +101,12 @@
   }
 }
 
+@media screen and (max-width: px) {
+  .right-column {
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 555px) {
   .title {
     font-size: 2em;
