@@ -20,7 +20,8 @@ export const getMoons = async () => {
 export const cleanMoons = (moonphases) => {
   return moonphases.response.map(info => ({
     date: info.dateTimeISO.slice(0, 10),
-    name: info.name,
+    name: info.name.charAt(0).toUpperCase() + 
+    info.name.slice(1),
     code: info.code
   }));
 };

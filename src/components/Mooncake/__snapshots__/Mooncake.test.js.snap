@@ -25,6 +25,10 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        false,
+        false,
+        false,
+        false,
         <h3
           className="phase-name"
 >
@@ -40,6 +44,10 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      false,
+      false,
+      false,
+      false,
       Object {
         "instance": null,
         "key": undefined,
@@ -74,6 +82,10 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          false,
+          false,
+          false,
+          false,
           <h3
             className="phase-name"
 >
@@ -89,6 +101,10 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        false,
+        false,
+        false,
+        false,
         Object {
           "instance": null,
           "key": undefined,
