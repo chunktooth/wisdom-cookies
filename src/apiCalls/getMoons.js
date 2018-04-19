@@ -10,7 +10,7 @@ export const getMoons = async () => {
     const response = await fetch(`${root}sunmoon/moonphases?limit=4&client_id=${clientID}&client_secret=${clientSecret}`);
     const moonphases = await response.json();
     const cleanedMoons = await cleanMoons(moonphases);
-
+    
     return cleanedMoons;
   } catch (error) {
     throw new Error(`Caught error: ${error.message}`);
@@ -20,6 +20,7 @@ export const getMoons = async () => {
 export const cleanMoons = (moonphases) => {
   return moonphases.response.map(info => ({
     date: info.dateTimeISO.slice(0, 10),
-    name: info.name
+    name: info.name,
+    code: info.code
   }));
 };

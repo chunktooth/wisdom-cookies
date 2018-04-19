@@ -11,7 +11,7 @@ export class Moons extends Component {
 
   moonPhases = () => (
     this.props.moonphases.map((phase, index) => (
-      <Mooncake phase={phase} key={index} />
+      <Mooncake phase={phase} key={index}/>
     ))
   )
 

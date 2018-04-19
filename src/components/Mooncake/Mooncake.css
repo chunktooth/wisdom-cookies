@@ -1,3 +1,28 @@
+.Mooncake {
+  width: 50%;
+}
+
+.moon {
+  width: 180px;
+}
+
+.newMoon {
+  width: 100px;
+  margin: auto;
+}
+
+.firstQuarter {
+  width: 100px;
+}
+
+.fullMoon {
+  width: 100px;
+}
+
+.lastQuarter {
+  width: 100px;
+}
+
 .phase-name,
 .phase-date {
   color: #FFFFFF;
@@ -5,4 +30,10 @@
 
 .phase-date {
   font-size: .7em;
+}
+
+@media screen and (max-width: 320px) {
+  .Mooncake {
+    width: 100%;
+  }
 }
