@@ -51,20 +51,24 @@
 
 .wisdom-wrapper {
   position: relative;
-  z-index: 5;
   bottom: 180px;
-  left: 8px;
+  width: 100%;
+  z-index: 5;
+}
+
+.wisdom-paper,
+.message {
+  margin: 0 auto;
+  vertical-align: middle;
 }
 
 .message {
-  position: absolute;
-  top: 35%;
-  left: 28%;
+  position: relative;
+  top: -65px;
   width: 320px;
   color: #3A4B77;
   font-size: .8em;
   font-weight: bold;
-  margin: 0;
 }
 
 .jar-o-wisdom,
@@ -121,31 +125,6 @@
   margin: 0;
 }
 
-
-@media screen and (max-width: 1228px) {
-.message {
-    left: 25%;
-  }
-}
-
-@media screen and (max-width: 1111px) {
-  .message {
-    left: 36%;
-  }
-}
-
-@media screen and (max-width: 888px) {
-  .message {
-    left: 32%;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  .message {
-    left: 30%;
-  }
-}
-
 @media screen and (max-width: 601px) {
   .left-cookie {
     width: 300px;
@@ -153,18 +132,6 @@
 
   .right-cookie {
     width: 260px;
-  }
-}
-
-@media screen and (max-width: 590px) {
-  .message {
-    left: 23%;
-  }
-}
-
-@media screen and (max-width: 588px) {
-  .wisdom-wrapper {
-    bottom: 211px;
   }
 }
 
@@ -200,23 +167,6 @@
   .wisdom-wrapper {
     bottom: 211px;
   }
-
-  .message {
-    left: 17%;
-  }
-}
-
- @media screen and (max-width: 400px) {
-  .message {
-    left: 12%;
-  }
-}
-
-
-@media screen and (max-width: 382px) {
-  .wisdom-wrapper {
-    bottom: 233px;
-  }
 }
 
 @media screen and (max-width: 376px) {
@@ -229,7 +179,7 @@
     width: 150px;
   }
 
-   .left-cookie-broken {
+  .left-cookie-broken {
     left: -130px;
   } 
 }
@@ -237,13 +187,6 @@
 @media screen and (max-width: 364px) {
   .wisdom-paper {
     width: 248px;
-    top: ;
-  }
-
-  .message {
-    width: 238px;
-    top: 13%;
-    left: 18%;
   }
 
   .left-cookie-broken {
@@ -253,27 +196,22 @@
   .right-cookie-broken {
     left: 91px;
   }
-}
 
-@media screen and (max-width: 353px) {
   .message {
-    top: 30%;
-    left: 16%;
+    top: -50px;
   }
 }
 
 @media screen and (max-width: 320px) {
- .message {
-    width: 238px;
-    top: 22%;
-    left: 14%;
-  }
-
   .left-cookie-broken {
     top: 36px;
   }
 
   .right-cookie-broken {
     top: 32px;
+  }
+
+  .wisdom-wrapper {
+    bottom: 230px;
   }
 }

@@ -59,13 +59,6 @@
   margin: 130px auto;
 }
 
-
-@media screen and (max-width: 1228px) {
-  .message {
-    left: 25%;
-  }
-}
-
 @media screen and (max-width: 1203px) {
   .left-column {
     width: 60%;
@@ -98,12 +91,6 @@
   .dragon {
     top: 64px;
     left: 34px;
-  }
-}
-
-@media screen and (max-width: px) {
-  .right-column {
-    height: 100%;
   }
 }
 

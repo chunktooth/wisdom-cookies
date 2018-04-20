@@ -37,6 +37,7 @@ ShallowWrapper {
         <p
           className="phase-date"
 >
+          on 
           2018-04-22
 </p>,
       ],
@@ -65,11 +66,17 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "2018-04-22",
+          "children": Array [
+            "on ",
+            "2018-04-22",
+          ],
           "className": "phase-date",
         },
         "ref": null,
-        "rendered": "2018-04-22",
+        "rendered": Array [
+          "on ",
+          "2018-04-22",
+        ],
         "type": "p",
       },
     ],
@@ -94,6 +101,7 @@ ShallowWrapper {
           <p
             className="phase-date"
 >
+            on 
             2018-04-22
 </p>,
         ],
@@ -122,11 +130,17 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "2018-04-22",
+            "children": Array [
+              "on ",
+              "2018-04-22",
+            ],
             "className": "phase-date",
           },
           "ref": null,
-          "rendered": "2018-04-22",
+          "rendered": Array [
+            "on ",
+            "2018-04-22",
+          ],
           "type": "p",
         },
       ],

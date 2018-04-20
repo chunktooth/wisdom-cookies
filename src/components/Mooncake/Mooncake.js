@@ -34,7 +34,7 @@ export const Mooncake = ({ phase }) => {
           alt="The right half of mooncake is eaten" />
       }
       <h3 className='phase-name'>{phase.name}</h3>
-      <p className='phase-date'>{phase.date}</p>
+      <p className='phase-date'>on {phase.date}</p>
     </div>
   );
 };
