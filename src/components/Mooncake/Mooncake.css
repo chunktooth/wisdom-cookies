@@ -10,12 +10,11 @@
 
 .first-quarter, 
 .last-quarter {
-  width: 90px;
-  margin-bottom: 10px;
+  width: 100px;
 }
 
 .full-moon {
-  width: 130px;
+  width: 110px;
 }
 
 .lastQuarter {
@@ -28,7 +27,8 @@
 }
 
 .phase-date {
-  font-size: .7em;
+  font-size: .8em;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 320px) {

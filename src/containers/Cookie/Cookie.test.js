@@ -20,12 +20,15 @@ describe('Cookie', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should be update revealWisdom state', () => {
+  it('should be update revealWisdom state', async () => {
+    console.log(wrapper.state())
     expect(wrapper.state('revealWisdom')).toEqual(false);
     wrapper.instance().eatCookie();
-    setTimeout(() => { 
-      expect(wrapper.state('revealWisdom')).toEqual(true); 
-    }, 0);
+    console.log(wrapper.state())
+    await expect(wrapper.state('revealWisdom')).toEqual(true); 
+    // setTimeout(() => { 
+    //   expect(wrapper.state('revealWisdom')).toEqual(true); 
+    // }, 0);
   });
 
   it('should be update brokenCookie state', () => {
