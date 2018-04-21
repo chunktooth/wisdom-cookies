@@ -71,7 +71,7 @@ export class Cookie extends Component {
     return (
       <div className='Cookie'> 
         <div className='btn-shelf'> 
-          <NavLink to='/jar' id='jar'> 
+          <NavLink to='/jar' id='jar' className='nav'> 
             <div className='jar-o-wisdoms'>
               <img src={wisdomJar}
                 className='wisdom-jar' 
@@ -83,7 +83,7 @@ export class Cookie extends Component {
             </div>
           </NavLink>
 
-          <NavLink to='/moons' id='moons'>
+          <NavLink to='/moons' id='moons' className='nav'>
             <div className='see-the-moon'>
               <img src={moonCake}
                 className='moon-cake' 
