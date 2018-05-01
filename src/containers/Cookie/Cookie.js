@@ -51,9 +51,12 @@ export class Cookie extends Component {
   putWisdomInJar = () => {
     let { jar } = this.props;
     let { wisdom } = this.state;
+    let key = wisdom.id;
 
     if (!jar.find(wisdomInJar => wisdomInJar.id === 
       wisdom.id)) {
+      let localWisdom = JSON.stringify(wisdom);
+      localStorage.setItem(key, localWisdom);
       this.props.keepInJar(wisdom);
     }
     this.setState({ 
@@ -71,7 +74,7 @@ export class Cookie extends Component {
     return (
       <div className='Cookie'> 
         <div className='btn-shelf'> 
-          <NavLink to='/jar' id='jar' className='nav'> 
+          <NavLink to='/' id='jar' className='nav'> 
             <div className='jar-o-wisdoms'>
               <img src={wisdomJar}
                 className='wisdom-jar' 
