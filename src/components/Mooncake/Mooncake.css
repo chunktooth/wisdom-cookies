@@ -3,21 +3,21 @@
   z-index: 10;
 }
 
-.new-moon {
+.new-moon-cake {
   width: 100px;
   height: 100px;
 }
 
-.first-quarter, 
-.last-quarter {
+.first-quarter-cake, 
+.last-quarter-cake {
   width: 100px;
 }
 
-.full-moon {
+.full-moon-cake {
   width: 110px;
 }
 
-.lastQuarter {
+.lastQuarter-cake {
   width: 100px;
 }
 
@@ -27,11 +27,18 @@
 }
 
 .phase-date {
-  font-size: .8em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 
-@media screen and (max-width: 320px) {
+.new-moon,
+.first-quarter,
+.fullmoon,
+.last-quarter {
+  width: 106px;
+}
+
+@media screen and (max-width: 620px) {
   .Mooncake {
     width: 100%;
   }

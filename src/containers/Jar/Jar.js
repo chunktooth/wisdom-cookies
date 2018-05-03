@@ -7,13 +7,15 @@ import './Jar.css';
 
 export class Jar extends Component {
 
-  wisdomCollection = () => ( 
+  wisdomCollection = () => (
     this.props.jar.map(wisdom => (
       <WisdomInJar 
         wisdom={wisdom} 
         key={wisdom.id} />
     ))
   )
+
+  // const wisdomFromStorage = localStorage.getItem(wisdom);
  
   render() {
     return (

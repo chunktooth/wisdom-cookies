@@ -27,10 +27,10 @@ export class Moons extends Component {
         <div className="show-moons">
           {this.moonPhases()}
         </div>
-        <NavLink to='/jar' id='jar'>
+        <NavLink to='/' id='jar'>
           <div className='jar-o-wisdoms'>
             <img src={wisdomJar}
-              className='wisdom-jar' 
+              className='little-wisdom-jar' 
               alt="Revisit a jar of wisdoms" />
             <p className='btn-txt'>
               Back to Jar  
