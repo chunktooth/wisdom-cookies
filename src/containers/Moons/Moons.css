@@ -15,9 +15,11 @@
   margin: 30px;
 }
 
-.Moons .wisdom-jar {
+.little-wisdom-jar {
   width: 30px;
   padding: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px #FFF;
 }
 
 .nav {

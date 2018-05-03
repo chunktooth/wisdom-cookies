@@ -36,7 +36,7 @@ export class App extends Component {
           <Cookie />
         </div>
         <div className='right-column'>
-          <Route exact path='/jar' component={ Jar } />
+          <Route exact path='/' component={ Jar } />
           <Route exact path='/moons' component={ Moons } />
         </div>
       </div>
