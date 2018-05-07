@@ -169,6 +169,10 @@
   .wisdom-wrapper {
     bottom: 211px;
   }
+
+  .message {
+    width: 250px;
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -201,6 +205,7 @@
 
   .message {
     top: -50px;
+    width: 200px;
   }
 }
 

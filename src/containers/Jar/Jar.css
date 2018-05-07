@@ -41,3 +41,9 @@
     height: 550px;
   }
 }
+
+@media screen and (max-width: 348px) {
+  .wisdom-collection {
+    width: 90%;
+  }
+}
