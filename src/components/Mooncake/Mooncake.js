@@ -19,7 +19,7 @@ export const Mooncake = ({ phase }) => {
           <img src={newMoonCake} 
             className='new-moon-cake' 
             alt="An empty plate of cake crumbles" />
-           <img src={newMoon} 
+          <img src={newMoon} 
             className='new-moon' 
             alt="Moon with slender outer crescent, in conjunction with the sun" />
         </div>
@@ -27,12 +27,12 @@ export const Mooncake = ({ phase }) => {
       {
         phase.code === 1 &&
         <div>
-        <img src={firstQuaterCake} 
-          className='first-quarter-cake' 
-          alt="The left half of mooncake is eaten" />
-        <img src={firstQuarter} 
-          className='first-quarter' 
-          alt="The left half of mooncake is dark" />
+          <img src={firstQuaterCake} 
+            className='first-quarter-cake' 
+            alt="The left half of mooncake is eaten" />
+          <img src={firstQuarter} 
+            className='first-quarter' 
+            alt="The left half of mooncake is dark" />
         </div>
       }
       {
